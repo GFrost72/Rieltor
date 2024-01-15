@@ -1,0 +1,298 @@
+.page {
+    background-color: #0E0E0E;
+    font-family: "play", "san-serif";
+    font-size: 18px;
+    color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Russo One";
+    margin: 0;
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.btn-reset {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: 95%;
+    margin: auto;
+}
+
+/* ---------------------------------------------------------------------------header----------------------------------------------------------------- */
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    position: relative;
+}
+
+.header__button {
+    align-items: center;
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding-top: 15px;
+    }
+}
+
+@media (max-width: 430px) {
+    .header {
+        padding-top: 10px;
+    }
+}
+
+
+.logo-wrapper {
+    display: flex;
+}
+
+.logo {
+    width: 108px;
+    height: 91px;
+    margin-right: 35px;
+}
+
+@media (max-width: 1024px) {
+    .logo {
+        width: 56px;
+        height: 47px;
+        margin-right: 15px;
+    }
+}
+
+
+@media (max-width: 430px) {
+    .logo {
+        width: 22px;
+        height: 19px;
+        margin-right: 15px;
+    }
+}
+
+.logo-text-one {
+    font-family: "Russo One";
+    font-size: 30px;
+    color: #22B4E1;
+}
+
+@media (max-width: 1024px) {
+    .logo-text-one {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 430px) {
+    .logo-text-one {
+        font-size: 10px;
+    }
+}
+
+.logo-text-two {
+    color: rgba(255, 255, 255, 0.80);
+}
+
+@media (max-width: 1024px) {
+    .logo-text-two {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 430px) {
+    .logo-text-two {
+        font-size: 6px;
+    }
+}
+
+.icon {
+    background-image: url(./img/phone-header.svg);
+    width: 47px;
+    height: 47px;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 1024px) {
+    .icon {
+        width: 38px;
+        height: 38px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 430px) {
+    .icon {
+        width: 12px;
+        height: 12px;
+        background-image: url(./img/phone-header-320.svg);
+        padding: 0;
+    }
+}
+
+.logo__text {
+    flex-direction: column;
+    display: flex;
+    align-self: center;
+}
+
+.navigation {
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    display: flex;
+}
+
+@media (max-width: 1024px) {
+
+    .navigation {
+        display: flex;
+        gap: 17px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .navigation {
+        display: none;
+    }
+}
+
+.nav_link {
+    font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+    .nav_link {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 430px) {
+    .nav_link {
+        font-size: 8px;
+    }
+
+    .nav_link:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.header__phone {
+    font-family: Russo One;
+    font-size: 20px;
+    color: white;
+    margin-right: 30px;
+}
+
+@media (max-width: 1024px) {
+    .header__phone {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 430px) {
+    .header__phone {
+        font-size: 8px;
+        margin-right: 12px;
+    }
+}
+
+.phone-wrapper {
+    display: flex;
+}
+
+.burger-menu {
+    display: none;
+    /* Начально скрываем бургер-меню */
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        padding: 10px;
+        order: 3;
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 430px) {
+    .burger-menu {
+        margin-right: 10px;
+    }
+}
+
+.burger-menu div {
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+@media (max-width: 430px) {
+    .burger-menu div {
+        width: 25px;
+        height: 2px;
+        background-color: #fff;
+        margin: 4px 0;
+    }
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    background-color: #222;
+    padding: 15px;
+}
+
+.dropdown-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+    height: 30px;
+}
+
+@media (max-width: 430px) {
+    .burger-menu {
+        padding: 0;
+    }
+
+    .dropdown-menu a {
+        height: 15px;
+        margin-bottom: 7px;
+    }
+
+    .dropdown-menu {
+        padding: 7px;
+        right: -7px;
+    }
+}
