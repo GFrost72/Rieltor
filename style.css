@@ -341,7 +341,7 @@ a {
 
 @media (max-width: 440px) {
     .hero {
-        min-height: 244px;
+        min-height: 250px;
        }
 }
 
@@ -566,6 +566,7 @@ a {
     display: flex;
       align-items: center;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
 @media (max-width: 440px) {
