@@ -5,6 +5,22 @@
     color: white;
 }
 
+.section-offset {
+    margin: 40px 0px 40px 0px;
+}
+
+@media (max-width: 768px) {
+    .section-offset {
+        margin: 20px 0px 20px 0px;
+    }
+}
+
+@media (max-width: 440px) {
+    .section-offset {
+        margin: 5px 0px 5px 0px;
+    }
+}
+
 h1,
 h2,
 h3,
@@ -59,7 +75,7 @@ a {
     }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 440px) {
     .header {
         padding-top: 10px;
     }
@@ -76,7 +92,7 @@ a {
     margin-right: 35px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
     .logo {
         width: 56px;
         height: 47px;
@@ -85,7 +101,7 @@ a {
 }
 
 
-@media (max-width: 430px) {
+@media (max-width: 440px) {
     .logo {
         width: 22px;
         height: 19px;
@@ -99,13 +115,13 @@ a {
     color: #22B4E1;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
     .logo-text-one {
         font-size: 20px;
     }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 440px) {
     .logo-text-one {
         font-size: 10px;
     }
@@ -115,13 +131,13 @@ a {
     color: rgba(255, 255, 255, 0.80);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
     .logo-text-two {
         font-size: 12px;
     }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 440px) {
     .logo-text-two {
         font-size: 6px;
     }
@@ -134,7 +150,7 @@ a {
     background-repeat: no-repeat;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
     .icon {
         width: 38px;
         height: 38px;
@@ -142,7 +158,7 @@ a {
     }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 440px) {
     .icon {
         width: 12px;
         height: 12px;
@@ -164,7 +180,7 @@ a {
     display: flex;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
 
     .navigation {
         display: flex;
@@ -183,13 +199,13 @@ a {
     font-size: 16px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
     .nav_link {
         font-size: 14px;
     }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 440px) {
     .nav_link {
         font-size: 8px;
     }
@@ -206,13 +222,13 @@ a {
     margin-right: 30px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
     .header__phone {
         font-size: 16px;
     }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 440px) {
     .header__phone {
         font-size: 8px;
         margin-right: 12px;
@@ -242,7 +258,7 @@ a {
     }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 440px) {
     .burger-menu {
         margin-right: 10px;
     }
@@ -255,7 +271,7 @@ a {
     margin: 4px 0;
 }
 
-@media (max-width: 430px) {
+@media (max-width: 440px) {
     .burger-menu div {
         width: 25px;
         height: 2px;
@@ -281,7 +297,7 @@ a {
     height: 30px;
 }
 
-@media (max-width: 430px) {
+@media (max-width: 440px) {
     .burger-menu {
         padding: 0;
     }
@@ -294,5 +310,302 @@ a {
     .dropdown-menu {
         padding: 7px;
         right: -7px;
+    }
+}
+
+/* -------------------------------------------------------hero----------------------------------------- */
+
+.hero {
+    position: relative;
+    background-image: url(./img/hero-image.webp);
+    min-height: 435px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    /* Новое свойство для ограничения ширины .hero */
+        /* Центрирование .hero по горизонтали */
+}
+
+@media (max-width: 1280px) {
+    .hero {
+        background-image: url(./img/hero-image-1280.webp);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        background-image: url(./img/hero-image-768.webp);
+        background-size: contain;
+    }
+}
+
+@media (max-width: 440px) {
+    .hero {
+        min-height: 244px;
+       }
+}
+
+.hero-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.65);
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .hero-wrapper::before {
+        height: 436px;
+    }
+}
+
+@media (max-width: 440px) {
+    .hero-wrapper::before {
+        height: 100%;
+    }
+}
+
+.person-face {
+    background-image: url(./img/Persona-face.webp);
+    width: 20%;
+    height: auto;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 665px;
+    max-width: 100%;
+    /* Максимальная ширина до правой границы .hero-wrapper */
+}
+
+@media (max-width: 1280px) {
+    .person-face {
+        background-image: url(./img/Persona-face\ 1280.png);
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .person-face {
+        background-image: url(./img/Persona-face\ 768.webp);
+        height: 267px;
+    }
+}
+
+@media (max-width: 440px) {
+    .person-face {
+        background-image: url(./img/Persona-face\ 320.png);
+        height: 116px;
+        background-size: contain;
+        width: 30%;
+        height: 86%;
+        }
+}
+
+.hero-text-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 215px 0px 144px 140px;
+    width: 50%;
+ }
+
+ @media (max-width: 1280px) {
+    .hero-text-block {
+        padding: 220px 0px 140px 140px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text-block {
+        padding: 120px 0px 0px 90px;
+    }
+}
+
+@media (max-width: 440px) {
+    .hero-text-block {
+        padding: 64px 0px 0px 35px;
+    }
+}
+
+.hero__text-one {
+    font-size: 70px;
+    color: #fff;
+    z-index: 2;
+    font-weight: 400;
+    font-family: Russo One;
+}
+
+@media (max-width: 1280px) {
+    .hero__text-one {
+        font-size: 45px;
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero__text-one {
+        font-size: 30px;
+     }
+}
+
+@media (max-width: 440px) {
+    .hero__text-one {
+        font-size: 16px;
+        margin-bottom: 0px;
+     }
+}
+
+.hero__text-two {
+    color: #22B4E1;
+    z-index: 1;
+    font-family: Russo One;
+    font-size: 115px;
+    font-weight: 400;
+}
+
+@media (max-width: 1280px) {
+    .hero__text-two {
+        font-size: 70px;
+        margin-bottom: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero__text-two {
+        font-size: 50px;
+        margin-bottom: 10px;
+     }
+}
+
+@media (max-width: 440px) {
+    .hero__text-two {
+        font-size: 24px;
+        margin-bottom: 5px;
+     }
+}
+
+.hero__text_three {
+    z-index: 1;
+    color: #FFF;
+    font-family: Russo One;
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 5.6px;
+    margin-bottom: 55px;
+}
+
+@media (max-width: 1280px) {
+    .hero__text_three {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero__text_three {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 440px) {
+    .hero__text_three {
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+}
+
+.hero-button {
+    cursor: pointer;
+    display: flex;
+    padding: 8px 24px;
+    align-items: center;
+    gap: 16px;
+    border-radius: 8px;
+    background: #22B4E1;
+    z-index: 1;
+}
+
+@media (max-width: 440px) {
+    .hero-button {
+        padding: 2px 2px;
+        gap: 6px;
+    }
+}
+
+.hero-btn-icon {
+    background-image: url(./img/phone-svg-button.svg);
+    width: 12.479px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  
+}
+
+.hero-btn-text {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+@media (max-width: 1280px) {
+    .hero-btn-text {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 440px) {
+    .hero-btn-text {
+        font-size: 8px;
+    }
+}
+
+.hero-btn-block {
+    display: flex;
+      align-items: center;
+    gap: 40px;
+}
+
+@media (max-width: 440px) {
+    .hero-btn-block  {
+        gap: 15px;
+    }
+}
+
+.hero-desc {
+    flex: 1 0 0;
+    color: #FFF;
+font-family: Play;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 140% */
+z-index: 1;
+margin: 0;
+width: 530px;
+}
+
+@media (max-width: 1280px) {
+    .hero-desc {
+        font-size: 14px;
+        width: 440px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-desc {
+        width: 359px;
+        line-height: 26px;
+        width: 334px;
+    }
+}
+
+@media (max-width: 440px) {
+    .hero-desc {
+        font-size: 8px;
+        line-height: 14px;
+        max-width: 28%;
     }
 }
