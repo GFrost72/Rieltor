@@ -17,7 +17,7 @@
 
 @media (max-width: 440px) {
     .section-offset {
-        margin: 5px 0px 5px 0px;
+        margin: 10px 0px 10px 0px;
     }
 }
 
@@ -323,7 +323,7 @@ a {
     background-size: cover;
     max-width: 100%;
     /* Новое свойство для ограничения ширины .hero */
-        /* Центрирование .hero по горизонтали */
+    /* Центрирование .hero по горизонтали */
 }
 
 @media (max-width: 1280px) {
@@ -341,8 +341,9 @@ a {
 
 @media (max-width: 440px) {
     .hero {
-        min-height: 250px;
-       }
+        min-height: fit-content;
+        background-repeat: round;
+    }
 }
 
 .hero-wrapper::before {
@@ -354,18 +355,6 @@ a {
     left: 0;
     background: rgba(0, 0, 0, 0.65);
     pointer-events: none;
-}
-
-@media (max-width: 768px) {
-    .hero-wrapper::before {
-        height: 436px;
-    }
-}
-
-@media (max-width: 440px) {
-    .hero-wrapper::before {
-        height: 100%;
-    }
 }
 
 .person-face {
@@ -400,9 +389,9 @@ a {
         background-image: url(./img/Persona-face\ 320.png);
         height: 116px;
         background-size: contain;
-        width: 30%;
-        height: 86%;
-        }
+        width: 25%;
+        height: 76%;
+    }
 }
 
 .hero-text-block {
@@ -411,9 +400,9 @@ a {
     align-items: flex-start;
     padding: 215px 0px 144px 140px;
     width: 50%;
- }
+}
 
- @media (max-width: 1280px) {
+@media (max-width: 1280px) {
     .hero-text-block {
         padding: 220px 0px 140px 140px;
     }
@@ -449,14 +438,14 @@ a {
 @media (max-width: 768px) {
     .hero__text-one {
         font-size: 30px;
-     }
+    }
 }
 
 @media (max-width: 440px) {
     .hero__text-one {
         font-size: 16px;
         margin-bottom: 0px;
-     }
+    }
 }
 
 .hero__text-two {
@@ -478,14 +467,14 @@ a {
     .hero__text-two {
         font-size: 50px;
         margin-bottom: 10px;
-     }
+    }
 }
 
 @media (max-width: 440px) {
     .hero__text-two {
         font-size: 24px;
         margin-bottom: 5px;
-     }
+    }
 }
 
 .hero__text_three {
@@ -520,12 +509,20 @@ a {
 .hero-button {
     cursor: pointer;
     display: flex;
-    padding: 8px 24px;
+    padding: 10px 24px;
     align-items: center;
     gap: 16px;
     border-radius: 8px;
     background: #22B4E1;
     z-index: 1;
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    .hero-button {
+        padding: 8px 8px;
+        gap: 10px;
+    }
 }
 
 @media (max-width: 440px) {
@@ -537,16 +534,31 @@ a {
 
 .hero-btn-icon {
     background-image: url(./img/phone-svg-button.svg);
-    width: 12.479px;
-    height: 16px;
+    width: 35.479px;
+    height: 41px;
     background-size: contain;
     background-repeat: no-repeat;
-  
+
 }
+
+@media (max-width: 768px) {
+    .hero-btn-icon {
+width: 24.479px;
+    height: 26px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-btn-icon {
+        width: 18.479px;
+        height: 20px;
+    }
+}
+
 
 .hero-btn-text {
     color: #FFF;
-    font-size: 16px;
+    font-size: 28px;
     font-weight: 400;
 }
 
@@ -564,13 +576,20 @@ a {
 
 .hero-btn-block {
     display: flex;
-      align-items: center;
+    align-items: center;
     gap: 40px;
     flex-wrap: wrap;
 }
 
+@media (max-width: 768px) {
+    .hero-btn-block {
+        gap: 18px;
+        min-width: 145%;
+    }
+}
+
 @media (max-width: 440px) {
-    .hero-btn-block  {
+    .hero-btn-block {
         gap: 15px;
     }
 }
@@ -578,28 +597,26 @@ a {
 .hero-desc {
     flex: 1 0 0;
     color: #FFF;
-font-family: Play;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: 28px; /* 140% */
-z-index: 1;
-margin: 0;
-width: 530px;
+    font-family: Play;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    /* 140% */
+    z-index: 1;
+    margin: 0;
+    max-width: 530px;
 }
 
 @media (max-width: 1280px) {
     .hero-desc {
         font-size: 14px;
-        width: 440px;
-    }
+      }
 }
 
 @media (max-width: 768px) {
     .hero-desc {
-        width: 359px;
         line-height: 26px;
-        width: 334px;
     }
 }
 
@@ -607,6 +624,343 @@ width: 530px;
     .hero-desc {
         font-size: 8px;
         line-height: 14px;
-        max-width: 28%;
+    }
+}
+
+
+/* --------------------------------------------------------about-me------------------------------------------------- */
+
+.about-me__wrapper {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 60px;
+    align-self: stretch;
+    flex-wrap: wrap;
+    background: #0E0E0E;
+    }
+
+@media (max-width: 1280px) {
+    .about-me__wrapper{
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-me__wrapper{
+        gap: 22px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .about-me__wrapper{
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-me__wrapper{
+        padding: 0px;
+    }
+}
+
+.about-my__name,
+.my-direction {
+    display: flex;
+    min-width: 440px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 0 0;
+}
+
+.about-my__name {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+}
+
+@media (max-width: 1280px) {
+    .about-my__name{
+        padding: 24px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .about-my__name{
+        padding: 15px;
+    }
+}
+
+.my-name__second-title {
+    font-family: "Russo One";
+    font-size: 30px;
+    font-weight: 400;
+    color: #22B4E1;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1280px) {
+    .my-name__second-title {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 768px) {
+    .my-name__second-title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 440px) {
+    .my-name__second-title {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+}
+
+.my-direction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+@media (max-width: 1280px) {
+    .my-direction  {
+        gap: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .my-direction  {
+        gap: 26px;
+    }
+}
+
+@media (max-width: 440px) {
+    .my-direction  {
+        gap: 20px;
+    }
+}
+
+.my-direction__tittle {
+    text-align: center;
+    font-family: "Russo One";
+    font-size: 40px;
+    font-weight: 400;
+}
+
+@media (max-width: 1280px) {
+    .my-direction__tittle {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 440px) {
+    .my-direction__tittle {
+        font-size: 18px;
+    }
+}
+
+.cards__title {
+    color: #22B4E1;
+    text-align: center;
+    font-family: "Russo One";
+    font-size: 18px;
+    font-weight: 400;
+}
+
+@media (max-width: 1280px) {
+    .cards__title {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 440px) {
+    .cards__title {
+        font-size: 12px;
+    }
+}
+
+.my-name__desc {
+    font-size: 18px;
+    line-height: 34px;
+    /* 188.889% */
+    color: rgba(255, 255, 255, 0.60);
+}
+
+@media (max-width: 1280px) {
+    .my-name__desc{
+        font-size: 16px;
+        line-height: 25px;
+    }
+}
+
+@media (max-width: 440px) {
+    .my-name__desc{
+        font-size: 8px;
+        line-height: 13px;
+    }
+}
+
+.my-direction-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    /* Центрирование по горизонтали */
+}
+
+@media (max-width: 440px) {
+    .my-direction-cards{
+        flex-direction: column;
+    }
+}
+
+.my-direction-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    flex: 1 0 calc(50% - 40px);
+    /* Распределение по 2 карточки в ряду */
+    max-width: calc(50% - 40px);
+    /* Максимальная ширина карточки */
+}
+
+@media (max-width: 440px) {
+    .my-direction-article{
+        max-width: calc(115% - 40px);
+    }
+}
+
+.my-direction-icon-1,
+.my-direction-icon-2,
+.my-direction-icon-3,
+.my-direction-icon-4 {
+    background-repeat: no-repeat;
+    width: 65.95px;
+    height: 61px;
+    background-size: contain;
+}
+
+@media (max-width: 1280px) {
+    .my-direction-icon-1,
+.my-direction-icon-2,
+.my-direction-icon-3,
+.my-direction-icon-4 {
+    width: 61px;
+    height: 57px;
+    }
+}
+
+@media (max-width: 440px) {
+    .my-direction-icon-1,
+.my-direction-icon-2,
+.my-direction-icon-3,
+.my-direction-icon-4 {
+    width: 44px;
+    height: 38px;
+    }
+}
+
+
+
+
+.my-direction-icon-1 {
+    background-image: url(./img/zagorod-icon.svg);
+}
+
+.my-direction-icon-2 {
+    background-image: url(./img/nova-icon.svg);
+}
+
+.my-direction-icon-3 {
+    background-image: url(./img/secon-icon.svg);
+}
+
+.my-direction-icon-4 {
+    background-image: url(./img/ipoteka-icon.svg);
+}
+
+
+.my-name-desc-block {
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+@media (max-width: 1280px) {
+    .my-name-desc-block{
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .my-name-desc-block{
+        gap: 14px;
+    }
+}
+
+@media (max-width: 440px) {
+    .my-name-desc-block{
+        gap: 10px;
+    }
+}
+
+.my-direction-desc {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.60);
+    font-size: 16px;
+}
+
+@media (max-width: 1280px) {
+    .my-direction-desc{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 440px) {
+    .my-direction-desc{
+        font-size: 10px;
+    }
+}
+
+.my-name__tittle {
+    font-family: "Russo One";
+    font-size: 80px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 1280px) {
+    .my-name__tittle  {
+        margin-bottom: 26px;
+    }
+}
+
+@media (max-width: 440px) {
+    .my-name__tittle  {
+        margin-bottom: 15px;
+    }
+}
+
+
+@media (max-width: 1280px) {
+    .my-name__tittle {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .my-name__tittle {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 440px) {
+    .my-name__tittle {
+        font-size: 18px;
     }
 }
