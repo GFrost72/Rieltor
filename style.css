@@ -1019,3 +1019,71 @@ a {
         font-size: 16px;
     }
 }
+
+
+.about-me__numbers {
+    display: flex;
+}
+
+.about-image {
+    background-image: url(./img/about-image.webp);
+    width: 920px;
+    height: 593px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.about-me__exp {
+    display: flex;
+
+}
+
+.exp-wrapper {
+    background: #1A1A1A;
+    flex-shrink: 0;
+    padding: 76px 18px 121px 58px ;
+}
+
+.exp-second-title {
+    display: flex;
+flex-direction: column;
+justify-content: center;
+flex-shrink: 0;
+color: #22B4E1;
+font-weight: 400;
+font-family: "Russo One";
+font-size: 30px;
+margin-bottom: 5px;
+}
+
+.exp-title {
+    display: flex;
+    justify-content: center;
+flex-shrink: 0;
+flex-direction: column;
+font-size: 80px;
+font-weight: 400;
+}
+
+.exp-desc {
+    display: flex;
+    width: 459px;
+    height: 193px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.exp__text-decorate {
+    color: rgba(255, 255, 255, 0.60);
+}
+
+.numbers {
+    display: flex;
+    gap: 66px;
+}
+
+.numbers__cont {
+    display: flex;
+    flex-direction: column;
+}
