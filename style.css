@@ -1,70 +1,201 @@
-.page {
-    background-color: #0E0E0E;
-    font-family: "play", "san-serif";
-    font-size: 18px;
-    color: white;
+:root {
+    /*** COLORS ***/
+
+    /* Pallet */
+    --main-accent: #fff;
+    --main-base: #0e0e0e;
+    --main-primary: #22b4e1;
+    --main-secondary: #1a1a1a;
+
+    /* Extra */
+    --primary-100: #d7f1f9;
+    --primary-200: #aee4f4;
+    --primary-300: #86d6ee;
+    --primary-400: #5dc8e9;
+    --primary-50: #e9f7fc;
+    --primary-500: #35bbe3;
+    --primary-600: #1ca5ce;
+    --primary-700: #1785a6;
+    --primary-800: #11647e;
+    --primary-900: #0c4455;
+    --secondary-100: #dadada;
+    --secondary-500: #5e5e5e;
+
+
+    /* Text */
+    --text-primary: var(--main-accent);
+    --text-secondary: var(--main-primary);
+    --text-accent: var(--secondary-500);
+
+
+    /* Buttons */
+    --button-background-active: var(--primary-700);
+    --button-background-default: var(--main-primary);
+    --button-background-disabled: var(--primary-50);
+    --button-background-hover: var(--primary-300);
+
+    --button-text-primary-disabled: var(--secondary-100);
+    --button-text-primary-default: var(--main-accent);
+
+
+    /* Icons */
+    --icon-background: var(--main-primary);
+    --icon-background-secodary: var(--secondary-500);
+    --icon-fill-accent: var(--main-base);
+    --icon-fill-primary: var(--main-accent);
+    --icon-fill-secondary: var(--main-primary);
+
+
+    /* Surfaces */
+    --background-accent: var(--main-accent);
+    --background-secondary: var(--main-primary);
+    --background-extra: var(--main-secondary);
+    --background-main: var(--main-base);
+
+
+
+    /*** SIZES ***/
+
+    /* Corners */
+    --corners-rounded-xs: 0.375rem;
+    --corners-rounded-md: 0.5rem;
+    --corners-rounded-xl: 0.75rem;
+    --corners-rounded-xxl: 1rem;
+
+
+
+    /*** BREAKPOINTS ***/
+    --breakpoint-sm: 320px;
+    --breakpoint-md: 768px;
+    --breakpoint-xl: 1024px;
+    --breakpoint-xxl: 1440px;
+
+    /*** CONTAINERS ***/
+    --containers-sm: 300px;
+    --containers-md: 640px;
+    --containers-xl: 960px;
+    --containers-xxl: 1320px;
+
+    /*** FONTS ***/
+    --base-font-size: 16px;
+
 }
 
+html {
+    background-color: var(--background-main);
+    font-family: Play, Arial, san-serif, serif;
+    font-size: var(--base-font-size);
+    color: var(--text-primary);
+}
+
+/* UTILS */
 .flex {
     display: flex;
 }
 
-.section-offset {
-    margin: 40px 0px 40px 0px;
+
+/* TODO: что тут? */
+/*.section-offset {*/
+/*    margin: 40px 0;*/
+/*}*/
+
+/*@media (width <= 768px)  {*/
+/*    .section-offset {*/
+/*        margin: 20px 0;*/
+/*    }*/
+/*}*/
+
+/*@media (width <= 440px) {*/
+/*    .section-offset {*/
+/*        margin: 10px 0 0;*/
+/*    }*/
+/*}*/
+
+.container {
+    width: 100%;
+    padding: 0 1rem;
+    margin: 0 auto;
 }
 
-@media (max-width: 768px) {
-    .section-offset {
-        margin: 20px 0px 20px 0px;
+@media (width > 768px) {
+    .container {
+        max-width: var(--containers-md);
+        padding: 0 1rem;
     }
 }
 
-@media (max-width: 440px) {
-    .section-offset {
-        margin: 10px 0px 0px 0px;
+@media (width > 1024px) {
+    .container {
+        max-width: var(--containers-xl);
+        padding: 0 1rem;
     }
 }
+
+@media (width > 1440px) {
+    .container {
+        max-width: var(--containers-xxl);
+        padding: 0 1rem;
+    }
+}
+
+@media (width > 768px) {
+
+}
+
+@media (width > 1024px) {
+
+}
+
+@media (width > 1440px) {
+
+}
+
 
 h1,
 h2,
 h3,
 h4,
 h5 {
-    font-family: "Russo One";
-    margin: 0;
+    font-family: "Russo One", Arial, serif;
 }
 
-.list-reset {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.btn-reset {
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.container {
-    width: 95%;
-    margin: auto;
-}
 
 /* ---------------------------------------------------------------------------header----------------------------------------------------------------- */
 
 
 .header {
+    padding: 20px 0;
+}
+
+@media (width <= 1440px) {
+    .header {
+        padding-top: 30px;
+    }
+}
+
+@media (width <= 1024px) {
+    .header {
+        padding-top: 30px;
+    }
+}
+
+@media (width <= 768px) {
+    .header {
+        padding-top: 15px;
+    }
+}
+
+@media (width <= 320px) {
+    .header {
+        padding-top: 10px;
+    }
+}
+
+
+.header-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 30px;
     position: relative;
 }
 
@@ -73,30 +204,25 @@ a {
     display: flex;
 }
 
-@media (max-width: 768px) {
-    .header {
-        padding-top: 15px;
-    }
-}
-
-@media (max-width: 440px) {
-    .header {
-        padding-top: 10px;
-    }
-}
-
-
 .logo-wrapper {
     display: flex;
+    align-items: center;
 }
 
 .logo {
+    margin-right: 35px;
     width: 108px;
     height: 91px;
-    margin-right: 35px;
 }
 
-@media (max-width: 1280px) {
+.logo > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+@media (width <= 1440px) {
     .logo {
         width: 56px;
         height: 47px;
@@ -104,8 +230,23 @@ a {
     }
 }
 
+@media (width <= 1024px) {
+    .logo {
+        width: 56px;
+        height: 47px;
+        margin-right: 15px;
+    }
+}
 
-@media (max-width: 440px) {
+@media (width <= 768px) {
+    .logo {
+        width: 56px;
+        height: 47px;
+        margin-right: 15px;
+    }
+}
+
+@media (width <= 320px) {
     .logo {
         width: 22px;
         height: 19px;
@@ -114,47 +255,77 @@ a {
 }
 
 .logo-text-one {
-    font-family: "Russo One";
-    font-size: 30px;
-    color: #22B4E1;
+    font-size: 1.667rem;
+    color: var(--text-secondary);
 }
 
-@media (max-width: 1280px) {
+@media (width <= 1440px) {
     .logo-text-one {
-        font-size: 20px;
+        font-size: 1.111rem;
     }
 }
 
-@media (max-width: 440px) {
+@media (width <= 1024px) {
     .logo-text-one {
-        font-size: 12px;
+        font-size: 1.111rem;
+    }
+
+}
+
+@media (width <= 768px) {
+    .logo-text-one {
+        font-size: 0.667rem;
     }
 }
+
+@media (width <= 320px) {
+    .logo-text-one {
+        font-size: 0.667rem;
+    }
+}
+
 
 .logo-text-two {
-    color: rgba(255, 255, 255, 0.80);
+    color: var(--text-primary);
 }
 
-@media (max-width: 1280px) {
+@media (width <= 1440px) {
     .logo-text-two {
-        font-size: 12px;
+        font-size: 0.667rem;
     }
 }
 
-@media (max-width: 440px) {
+@media (width <= 1024px) {
     .logo-text-two {
-        font-size: 7px;
+        font-size: 0.667rem;
     }
 }
+
+@media (width <= 768px) {
+    .logo-text-two {
+        font-size: 0.389rem;
+    }
+}
+
+@media (width <= 320px) {
+    .logo-text-two {
+        font-size: 0.389rem;
+    }
+}
+
 
 .icon {
-    background-image: url(./img/phone-header.svg);
     width: 47px;
     height: 47px;
-    background-repeat: no-repeat;
 }
 
-@media (max-width: 1280px) {
+.icon > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media (width <= 1440px) {
     .icon {
         width: 38px;
         height: 38px;
@@ -162,15 +333,28 @@ a {
     }
 }
 
-@media (max-width: 440px) {
+@media (width <= 1024px) {
+    .icon {
+        width: 38px;
+        height: 38px;
+        padding: 5px;
+    }
+}
+
+@media (width <= 768px) {
     .icon {
         width: 19px;
         height: 19px;
-        background-image: url(./img/phone-header-320.svg);
-        padding: 0;
-        background-size: contain;
     }
 }
+
+@media (width <= 320px) {
+    .icon {
+        width: 19px;
+        height: 19px;
+    }
+}
+
 
 .logo__text {
     flex-direction: column;
@@ -179,42 +363,60 @@ a {
 }
 
 .navigation {
-    justify-content: center;
-    align-items: flex-start;
-    gap: 60px;
+    flex-grow: 1;
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 1rem;
 }
 
-@media (max-width: 1280px) {
-
+@media (width <= 1440px) {
     .navigation {
         display: flex;
-        gap: 17px;
     }
 }
 
-@media (max-width: 768px) {
+@media (width <= 1024px) {
+    .navigation {
+        display: flex;
+    }
+}
 
+@media (width <= 768px) {
     .navigation {
         display: none;
     }
 }
 
+@media (width <= 320px) {
+    .navigation {
+        display: none;
+    }
+}
+
+
 .nav_link {
-    font-size: 16px;
+    font-size: 1rem;
+    padding: 0 0.3rem;
 }
 
 .nav_link:last-child {
     margin-bottom: 0;
 }
 
-@media (max-width: 1280px) {
+@media (width <= 1440px) {
     .nav_link {
         font-size: 14px;
     }
 }
 
-@media (max-width: 440px) {
+@media (width <= 1024px) {
+    .nav_link {
+        font-size: 14px;
+    }
+}
+
+@media (width <= 768px) {
     .nav_link {
         font-size: 8px;
     }
@@ -224,20 +426,43 @@ a {
     }
 }
 
+@media (width <= 320px) {
+    .nav_link {
+        font-size: 8px;
+    }
+
+    .nav_link:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
 .header__phone {
-    font-family: Russo One;
     font-size: 20px;
     color: white;
     margin-right: 30px;
 }
 
-@media (max-width: 1280px) {
+@media (width <= 1440px) {
     .header__phone {
         font-size: 16px;
     }
 }
 
-@media (max-width: 440px) {
+@media (width <= 1024px) {
+    .header__phone {
+        font-size: 16px;
+    }
+}
+
+@media (width <= 768px) {
+    .header__phone {
+        font-size: 12px;
+        margin-right: 12px;
+    }
+}
+
+@media (width <= 320px) {
     .header__phone {
         font-size: 12px;
         margin-right: 12px;
@@ -250,12 +475,10 @@ a {
 
 .burger-menu {
     display: none;
-    /* Начально скрываем бургер-меню */
     cursor: pointer;
 }
 
-
-@media (max-width: 768px) {
+@media (width <= 768px) {
     .burger-menu {
         display: flex;
         flex-direction: column;
@@ -267,24 +490,35 @@ a {
     }
 }
 
-@media (max-width: 440px) {
+@media (width <= 320px) {
     .burger-menu {
         margin-right: 10px;
     }
 }
 
+
 .burger-menu div {
     width: 25px;
     height: 2px;
-    background-color: #fff;
+    background-color: var(--background-accent);
     margin: 4px 0;
 }
 
-@media (max-width: 440px) {
+
+@media (width <= 768px) {
     .burger-menu div {
         width: 25px;
         height: 2px;
-        background-color: #fff;
+        background-color: var(--background-accent);
+        margin: 4px 0;
+    }
+}
+
+@media (width <= 320px) {
+    .burger-menu div {
+        width: 25px;
+        height: 2px;
+        background-color: var(--background-accent);
         margin: 4px 0;
     }
 }
@@ -292,40 +526,40 @@ a {
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: 0px;
+    top: 0;
     right: 0;
     background-color: #222;
     padding: 15px;
     z-index: 1;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
     .dropdown-menu {
         right: -19px;
     }
+
 }
+
+@media (width <= 320px) {
+    .burger-menu {
+        padding: 7px;
+        right: -7px;
+    }
+}
+
 
 .dropdown-menu a {
     display: block;
-    color: white;
+    color: var(--text-primary);
     text-decoration: none;
     margin-bottom: 10px;
     height: 30px;
 }
 
-@media (max-width: 440px) {
-    .burger-menu {
-        padding: 0;
-    }
-
+@media (width <= 320px) {
     .dropdown-menu a {
         height: 15px;
         margin-bottom: 7px;
-    }
-
-    .dropdown-menu {
-        padding: 7px;
-        right: -7px;
     }
 }
 
@@ -334,7 +568,9 @@ a {
 .hero {
     position: relative;
     background-image: url(./img/hero-image.webp);
-    min-height: 435px;
+    display: flex;
+    align-items: center;
+    min-height: 860px;
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 100%;
@@ -342,18 +578,31 @@ a {
     /* Центрирование .hero по горизонтали */
 }
 
-@media (max-width: 1280px) {
+@media (width <= 1440px) {
     .hero {
-        background-image: url(./img/hero-image-1280.webp);
+        min-height: 680px;
     }
 }
 
-@media (max-width: 768px) {
+@media (width <= 1024px) {
     .hero {
-        background-image: url(./img/hero-image-768.webp);
-        background-size: contain;
+        min-height: 680px;
     }
 }
+
+@media (width <= 768px) {
+    .hero {
+        min-height: 440px;
+    }
+}
+
+@media (width <= 320px) {
+    .hero {
+        min-height: 380px;
+    }
+}
+
+
 
 @media (max-width: 440px) {
     .hero {
@@ -374,60 +623,48 @@ a {
 }
 
 .person-face {
-    background-image: url(./img/Persona-face.webp);
-    width: 20%;
-    height: auto;
-    background-repeat: no-repeat;
     position: absolute;
     bottom: 0;
     right: 0;
-    height: 665px;
-    max-width: 100%;
+    height: 600px;
+    /*background-image: url(./img/Persona-face.webp);*/
+    /*width: 20%;*/
+    /*height: auto;*/
+    /*background-repeat: no-repeat;*/
+    /*position: absolute;*/
+    /*bottom: 0;*/
+    /*right: 0;*/
+    /*max-width: 100%;*/
     /* Максимальная ширина до правой границы .hero-wrapper */
 }
 
-@media (max-width: 1280px) {
+.person-face > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media (width <= 1440px) {
     .person-face {
-        background-image: url(./img/Persona-face\ 1280.png);
         height: 500px;
     }
 }
 
-@media (max-width: 768px) {
+@media (width <= 1024px) {
     .person-face {
-        background-image: url(./img/Persona-face\ 768.webp);
-        height: 267px;
+        height: 400px;
     }
 }
 
-@media (max-width: 440px) {
+@media (width <= 768px) {
     .person-face {
-        background-image: url(./img/Persona-face\ 320.png);
-        height: 116px;
-        background-size: contain;
-        width: 18%;
-        height: 66%;
+        height: 350px;
     }
 }
 
-@media (max-width: 390px) {
+@media (width <= 320px) {
     .person-face {
-        width: 19%;
-        height: 63%;
-    }
-}
-
-@media (max-width: 375px) {
-    .person-face {
-        width: 19%;
-        height: 61%;
-    }
-}
-
-@media (max-width: 375px) {
-    .person-face {
-        width: 23%;
-        height: 61%;
+        height: 300px;
     }
 }
 
@@ -435,34 +672,31 @@ a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 215px 0px 144px 140px;
-    width: 50%;
 }
 
 @media (max-width: 1280px) {
     .hero-text-block {
-        padding: 220px 0px 140px 140px;
+        /*padding: 220px 0 140px 140px;*/
     }
 }
 
 @media (max-width: 768px) {
     .hero-text-block {
-        padding: 120px 0px 0px 90px;
+        /*padding: 120px 0 0 90px;*/
     }
 }
 
 @media (max-width: 440px) {
     .hero-text-block {
-        padding: 55px 0px 25px 35px;
+        /*padding: 55px 0 25px 35px;*/
     }
 }
 
 .hero__text-one {
     font-size: 70px;
-    color: #fff;
+    color: var(--text-primary);
     z-index: 2;
     font-weight: 400;
-    font-family: Russo One;
 }
 
 @media (max-width: 1280px) {
@@ -481,14 +715,13 @@ a {
 @media (max-width: 440px) {
     .hero__text-one {
         font-size: 16px;
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
 }
 
 .hero__text-two {
-    color: #22B4E1;
+    color: var(--text-secondary);
     z-index: 1;
-    font-family: Russo One;
     font-size: 115px;
     font-weight: 400;
 }
@@ -516,8 +749,7 @@ a {
 
 .hero__text_three {
     z-index: 1;
-    color: #FFF;
-    font-family: Russo One;
+    color: var(--text-primary);
     font-size: 40px;
     font-weight: 400;
     letter-spacing: 5.6px;
@@ -539,7 +771,7 @@ a {
 @media (max-width: 440px) {
     .hero__text_three {
         font-size: 10px;
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
 }
 
@@ -549,8 +781,7 @@ a {
     padding: 10px 24px;
     align-items: center;
     gap: 16px;
-    border-radius: 8px;
-    background: #22B4E1;
+    background: var(--background-secondary);
     z-index: 1;
     border-radius: 20px;
 }
@@ -570,7 +801,7 @@ a {
 }
 
 .hero-btn-icon {
-    background-image: url(./img/phone-svg-button.svg);
+    /*background-image: url(assets/icons/icon-phone.svg);*/
     width: 35.479px;
     height: 41px;
     background-size: contain;
@@ -600,7 +831,7 @@ a {
 }
 
 .hero-btn-text {
-    color: #FFF;
+    color: var(--text-primary);
     font-size: 28px;
     font-weight: 400;
 }
@@ -622,13 +853,13 @@ a {
     align-items: center;
     gap: 40px;
     flex-wrap: wrap;
-    width: 110%;
+    max-width: 60rem;
 }
 
 @media (max-width: 768px) {
     .hero-btn-block {
         gap: 18px;
-        min-width: 145%;
+        /*min-width: 145%;*/
     }
 }
 
@@ -640,17 +871,14 @@ a {
 
 .hero-desc {
     flex: 1 0 0;
-    color: #FFF;
-    font-family: Play;
+    color: var(--text-primary);
     font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 32px;
     /* 140% */
     z-index: 1;
     margin: 0;
 }
 
+/*TODO: refactor*/
 @media (max-width: 1280px) {
     .hero-desc {
         font-size: 14px;
@@ -679,32 +907,32 @@ a {
 
 /* --------------------------------------------------------about-me------------------------------------------------- */
 
-.about-me__wrapper {
-    display: flex;
-    align-items: flex-start;
-    align-content: flex-start;
-    gap: 60px;
-    align-self: stretch;
-    flex-wrap: wrap;
-    background: #0E0E0E;
+.about-me {
+
 }
+
+.about-me__wrapper {
+    padding-top: 2rem;
+    display: flex;
+    /*background: var(--background-main);*/
+}
+
 
 @media (max-width: 1280px) {
     .about-me__wrapper {
-        padding: 20px;
     }
 }
 
 @media (max-width: 768px) {
     .about-me__wrapper {
+        flex-direction: column;
         gap: 22px;
-        padding: 0px;
     }
 }
 
 @media (max-width: 320px) {
     .about-me__wrapper {
-        gap: 0px;
+        gap: 0;
     }
 }
 
@@ -712,7 +940,7 @@ a {
 .about-my__name,
 .my-direction {
     display: flex;
-    min-width: 440px;
+    /*min-width: 440px;*/
     flex-direction: column;
     align-items: flex-start;
     flex: 1 0 0;
@@ -727,7 +955,7 @@ a {
 }
 
 .about-my__name {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--background-extra);
     padding: 30px;
 }
 
@@ -739,16 +967,14 @@ a {
 
 @media (max-width: 440px) {
     .about-my__name {
-        padding: 8px;
-        padding-top: 16px;
+        padding: 16px 8px 8px;
     }
 }
 
 .my-name__second-title {
-    font-family: "Russo One";
     font-size: 30px;
     font-weight: 400;
-    color: #22B4E1;
+    color: var(--text-secondary);
     margin-bottom: 8px;
     text-transform: uppercase;
 }
@@ -799,7 +1025,6 @@ a {
 
 .my-direction__tittle {
     text-align: center;
-    font-family: "Russo One";
     font-size: 40px;
     font-weight: 400;
 }
@@ -818,9 +1043,8 @@ a {
 }
 
 .cards__title {
-    color: #22B4E1;
+    color: var(--text-secondary);
     text-align: center;
-    font-family: "Russo One";
     font-size: 18px;
     font-weight: 400;
 }
@@ -841,7 +1065,7 @@ a {
     font-size: 18px;
     line-height: 34px;
     /* 188.889% */
-    color: rgba(255, 255, 255, 0.60);
+    color: var(--text-primary);
 }
 
 @media (max-width: 1280px) {
@@ -927,24 +1151,23 @@ a {
 
 
 .my-direction-icon-1 {
-    background-image: url(./img/zagorod-icon.svg);
+    background-image: url("assets/icons/icon-zagorod.svg");
 }
 
 .my-direction-icon-2 {
-    background-image: url(./img/nova-icon.svg);
+    background-image: url("assets/icons/icon-nova.svg");
 }
 
 .my-direction-icon-3 {
-    background-image: url(./img/secon-icon.svg);
+    background-image: url("assets/icons/icon-secon.svg");
 }
 
 .my-direction-icon-4 {
-    background-image: url(./img/ipoteka-icon.svg);
+    background-image: url("assets/icons/icon-ipoteka.svg");
 }
 
 
 .my-name-desc-block {
-    gap: 40px;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -987,7 +1210,6 @@ a {
 }
 
 .my-name__tittle {
-    font-family: "Russo One";
     font-size: 80px;
     font-weight: 400;
     margin-bottom: 40px;
@@ -1032,7 +1254,7 @@ a {
     align-content: center;
     align-self: stretch;
     flex-wrap: wrap;
-    
+
 }
 
 .about-image {
@@ -1102,7 +1324,6 @@ a {
     justify-content: center;
     color: #22B4E1;
     font-weight: 400;
-    font-family: "Russo One";
     font-size: 30px;
     text-transform: uppercase;
 }
@@ -1117,7 +1338,6 @@ a {
     justify-content: center;
     color: #FFF;
     font-weight: 400;
-    font-family: "Russo One";
     font-size: 80px;
     text-transform: uppercase;
 }
@@ -1144,7 +1364,6 @@ a {
 .bot-numbers__number {
     color: #22B4E1;
     font-weight: 400;
-    font-family: "Russo One";
     font-size: 54px;
     text-transform: uppercase;
 }
@@ -1155,7 +1374,6 @@ a {
     height: 25px;
     flex-direction: column;
     justify-content: center;
-    font-family: "Russo One";
     font-size: 20px;
     font-weight: 400;
 }
@@ -1166,7 +1384,7 @@ a {
     align-items: flex-start;
     align-content: flex-start;
     gap: 10px;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
 }
 
 .exp-wrapper {

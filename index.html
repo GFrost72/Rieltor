@@ -7,17 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мороз Глеб - частный риэлтор, продажа-покупка недвижимости в г. Тюмень</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Play:regular,700" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Russo+One:regular" rel="stylesheet" />
+    <link href="fonts/play-font.css" rel="stylesheet"/>
+    <link href="fonts/russo-one-font.css" rel="stylesheet"/>
     <link rel="stylesheet" href="./normalize.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body class="page">
-    <div class="container">
-        <header class="header">
+    <header class="header">
+        <div class="container header-wrapper">
             <div class="logo-wrapper">
-                <a href="./index.html"><img class="logo" src="./img/logo.svg" alt="logo"></a>
+                <a href="./index.html" class="logo">
+                    <img src="./img/logo.svg" alt="logo">
+                </a>
                 <div class="logo__text">
                     <span class="logo-text-one">МОРОЗ ГЛЕБ</span>
                     <span class="logo-text-two">Агент по недвижимости</span>
@@ -49,95 +51,96 @@
             </div>
 
             <div class="phone-wrapper">
-                <button class="header__button btn-reset">
+                <button class="header__button">
                     <a class="header__phone" href="tel:+79120781701">
                         <span class="header__phone-text">8-912-078-17-01</span>
                     </a>
                 </button>
-                <button class="header__button btn-reset">
+                <button class="header__button">
                     <a class="" href="tel:+79120781701">
-                        <div class="icon"></div>
+                        <div class="icon">
+                            <img src="./assets/icons/icon-phone.svg" alt="phone">
+                        </div>
                     </a>
                 </button>
             </div>
-        </header>
-    </div>
-    <section class="hero section-offset">
-        <div class="hero-wrapper">
-            <div class="hero-text-block">
-                <span class="hero__text-one">ЧАСТНЫЙ</span>
-                <h1 class="hero__text-two">РИЭЛТОР</h1>
-                <h2 class="hero__text_three">г. Тюмень</h2>
-                <div class="hero-btn-block">
-                    <button class="hero-button btn-rest">
-                        <div class="hero-btn-icon"></div>
-                        <div class="hero-btn-text">ЗАКАЗАТЬ ЗВОНОК</div>
-                    </button>
-                    <p class="hero-desc">Сделки любой сложности, честно, быстро и безопасно.
-                        Моя задача - решить Ваш жилищный вопрос!</p>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-wrapper">
+                <div class="hero-text-block">
+                    <span class="hero__text-one">ЧАСТНЫЙ</span>
+                    <h1 class="hero__text-two">РИЭЛТОР</h1>
+                    <h2 class="hero__text_three">г. Тюмень</h2>
+                    <div class="hero-btn-block">
+                        <button class="hero-button btn-rest">
+                            <div class="hero-btn-icon"></div>
+                            <div class="hero-btn-text">ЗАКАЗАТЬ ЗВОНОК</div>
+                        </button>
+                        <p class="hero-desc">Сделки любой сложности, честно, быстро и безопасно. Моя задача - решить Ваш жилищный вопрос!</p>
+                    </div>
                 </div>
+
             </div>
-            <div class="person-face"></div>
+        </div>
+
+        <div class="person-face">
+            <img src="./img/Persona-face%201280.png" alt="Gleb Moroz">
         </div>
     </section>
 
-    <div class="container">
         <section class="about-me">
-            <div class="about-me__wrapper">
-                <div class="about-my__name">
-                    <h3 class="my-name__second-title">Имя сделанное годами</h3>
-                    <h2 class="my-name__tittle">ОБО МНЕ</h2>
-                    <div class="my-name-desc-block">
-                        <span class="my-name__desc">Уже 9 лет я помогаю клиентам решать любые задачи, связанные с
-                            недвижимостью. В том числе,
-                            самые нестандартные и сложные сделки.</span>
-                        <span class="my-name__desc">Вы можете бесплатно получить консультацию по всем вопросам.</span>
-                        <span class="my-name__desc">Проведу Вас за руку через все круги сделки - приватизация, органы
-                            опеки,
-                            ноатирус, ипотечных квартиры и многое другое. В каждом случае я помогу найти оптимальное
-                            решение. </span>
-                        <span class="my-name__desc">Искренность, стала фундаментом моей жизненной философия, работаю на
-                            своё
-                            имя много лет.
-                            Я ценю доверие людей, поэтому всегда скажу и покажу всё как есть.</span>
+            <div class="container">
+                <div class="about-me__wrapper">
+                    <div class="about-my__name">
+                        <h3 class="my-name__second-title">Имя сделанное годами</h3>
+                        <h2 class="my-name__tittle">ОБО МНЕ</h2>
+                        <div class="my-name-desc-block">
+                                <span class="my-name__desc">Уже 9 лет я помогаю клиентам решать любые задачи, связанные с недвижимостью. В том числе, самые нестандартные и сложные сделки.</span>
+                            <span class="my-name__desc">Вы можете бесплатно получить консультацию по всем вопросам.</span>
+                            <span class="my-name__desc">Проведу Вас за руку через все круги сделки - приватизация, органы опеки, ноатирус, ипотечных квартиры и многое другое. В каждом случае я помогу найти оптимальное решение. </span>
+                            <span class="my-name__desc">Искренность, стала фундаментом моей жизненной философия, работаю на своё имя много лет. Я ценю доверие людей, поэтому всегда скажу и покажу всё как есть.</span>
+                        </div>
+                    </div>
+                    <div class="my-direction">
+                        <h2 class="my-direction__tittle">НАПРАВЛЕНИЯ</h2>
+                        <div class="my-direction-cards">
+                            <article class="my-direction-article">
+                                <div class="my-direction-icon-1"></div>
+                                <h3 class="cards__title">Загородная недвижимость</h3>
+                                <span class="my-direction-desc">Покупка/продажа земельного участка,
+                                        загородного дома, дачи</span>
+                                <span class="my-direction-desc">Помощь в строительстве дома</span>
+                            </article>
+
+                            <article class="my-direction-article">
+                                <div class="my-direction-icon-2"></div>
+                                <h3 class="cards__title">Новостройки</h3>
+                                <span class="my-direction-desc">Подбор новостроек без комиссии</span>
+                                <span class="my-direction-desc">Официальный партнёр ключевых застройщиков</span>
+                            </article>
+
+                            <article class="my-direction-article">
+                                <div class="my-direction-icon-3"></div>
+                                <h3 class="cards__title">Вторичное жильё</h3>
+                                <span class="my-direction-desc">Покупка/продажа квартиры под ключи</span>
+                                <span class="my-direction-desc">Одновременная продажа и покупка</span>
+                            </article>
+
+                            <article class="my-direction-article">
+                                <div class="my-direction-icon-4"></div>
+                                <h3 class="cards__title">Одобрение ипотеки</h3>
+                                <span class="my-direction-desc">Одобрение 90% заявок</span>
+                                <span class="my-direction-desc">Выбор самой выгодной процентной ставки</span>
+                                <span class="my-direction-desc">Страхование</span>
+                            </article>
+                        </div>
                     </div>
                 </div>
-                <div class="my-direction">
-                    <h2 class="my-direction__tittle">НАПРАВЛЕНИЯ</h2>
-                    <div class="my-direction-cards">
-                        <article class="my-direction-article">
-                            <div class="my-direction-icon-1"></div>
-                            <h3 class="cards__title">Загородная недвижимость</h3>
-                            <span class="my-direction-desc">Покупка/продажа земельного участка,
-                                загородного дома, дачи</span>
-                            <span class="my-direction-desc">Помощь в строительстве дома</span>
-                        </article>
-
-                        <article class="my-direction-article">
-                            <div class="my-direction-icon-2"></div>
-                            <h3 class="cards__title">Новостройки</h3>
-                            <span class="my-direction-desc">Подбор новостроек без комиссии</span>
-                            <span class="my-direction-desc">Официальный партнёр ключевых застройщиков</span>
-                        </article>
-
-                        <article class="my-direction-article">
-                            <div class="my-direction-icon-3"></div>
-                            <h3 class="cards__title">Вторичное жильё</h3>
-                            <span class="my-direction-desc">Покупка/продажа квартиры под ключи</span>
-                            <span class="my-direction-desc">Одновременная продажа и покупка</span>
-                        </article>
-
-                        <article class="my-direction-article">
-                            <div class="my-direction-icon-4"></div>
-                            <h3 class="cards__title">Одобрение ипотеки</h3>
-                            <span class="my-direction-desc">Одобрение 90% заявок</span>
-                            <span class="my-direction-desc">Выбор самой выгодной процентной ставки</span>
-                            <span class="my-direction-desc">Страхование</span>
-                        </article>
-                    </div>
-                </div>
-
             </div>
+
             <div class="about-me__numbers">
                 <div class="about-image"></div>
                 <div class="my-xp">
@@ -150,13 +153,9 @@
                                         <span class="top-titles-second">цифры</span>
                                     </div>
                                 </div>
-                                <span class="content-desc">
-                                    4 года в качестве специлаиста в АН <br>
-                                    2 года Руководитель Отдела Продаж<br>
-                                    3 года частная практика
-                                </span>
+                                <span class="content-desc">4 года в качестве специлаиста в АН <br>2 года Руководитель Отдела Продаж<br>3 года частная практика</span>
                             </div>
-                            <div class="my-xp-content__bot"> 
+                            <div class="my-xp-content__bot">
                                 <div class="content__bot-numbers">
                                     <div class="bot-numbers__number">600+</div>
                                     <div class="bot-numbers__desc">успешных сделок</div>
@@ -175,9 +174,6 @@
                 </div>
             </div>
         </section>
-    </div>
-
-
 
     <script src="./burger-menu.js"></script>
 </body>
