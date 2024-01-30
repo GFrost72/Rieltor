@@ -92,6 +92,7 @@
 .logo-text-one {
     font-size: 1.667rem;
     color: var(--text-secondary);
+    font-family: "Russo One";
 }
 
 @media (width <= 1440px) {
@@ -127,6 +128,7 @@
 @media (width <= 1440px) {
     .logo-text-two {
         font-size: 0.667rem;
+
     }
 }
 
@@ -276,6 +278,7 @@
     font-size: 20px;
     color: white;
     margin-right: 30px;
+    font-family: "Russo One";
 }
 
 @media (width <= 1440px) {

@@ -76,6 +76,7 @@
     font-weight: 400;
     font-size: 30px;
     text-transform: uppercase;
+    font-family: "Russo One"
 }
 
 .content-desc {
@@ -90,6 +91,7 @@
     font-weight: 400;
     font-size: 80px;
     text-transform: uppercase;
+    font-family: "Russo One"
 }
 
 .my-xp-content__bot {
@@ -116,6 +118,7 @@
     font-weight: 400;
     font-size: 54px;
     text-transform: uppercase;
+    font-family: "Russo One"
 }
 
 .bot-numbers__desc {

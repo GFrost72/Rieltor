@@ -120,6 +120,7 @@
     color: var(--text-primary);
     z-index: 2;
     font-weight: 400;
+    font-family: "Russo One";
 }
 
 @media (max-width: 1280px) {
@@ -224,7 +225,7 @@
 }
 
 .hero-btn-icon {
-    /*background-image: url(assets/icons/icon-phone.svg);*/
+    background-image: url(../assets/icons/icon-phone.svg);
     width: 35.479px;
     height: 41px;
     background-size: contain;
@@ -295,8 +296,8 @@
 .hero-desc {
     flex: 1 0 0;
     color: var(--text-primary);
-    font-size: 24px;
-    /* 140% */
+    font-size: 20px;
+    line-height: 28px;
     z-index: 1;
     margin: 0;
 }
@@ -305,6 +306,7 @@
 @media (max-width: 1280px) {
     .hero-desc {
         font-size: 14px;
+        max-width: 40%;
     }
 }
 
