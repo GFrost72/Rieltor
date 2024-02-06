@@ -1,0 +1,25 @@
+{
+    "name": "Rieltor",
+    "description": "Rieltor services site",
+    "version": "0.5.1",
+    "author": "Gleb Moroz",
+    "license": "UNLICENSED",
+    
+    "type": "module",
+    "scripts": {
+        "dev": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview"
+    },
+    "dependencies": {
+        "astro": "^4.3.2"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.17",
+        "cssnano": "^6.0.3",
+        "eslint": "^8.56.0",
+        "eslint-plugin-astro": "^0.31.4",
+        "eslint-plugin-jsx-a11y": "^6.8.0",
+        "sass": "^1.70.0"
+    }
+}
