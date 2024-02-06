@@ -1,0 +1,39 @@
+@import "variables";
+
+// COMMON
+html {
+	background-color: $background-main;
+	font-family: $font-primary;
+	font-size: $font-size-base;
+	color: $text-color-primary;
+}
+
+
+// CONTAINER
+
+.container {
+	width: 100%;
+	padding: 0 1rem;
+	margin: 0 auto;
+}
+
+@media (width > $breakpoint-md) {
+	.container {
+		max-width: $containers-md;
+		padding: 0 1rem;
+	}
+}
+
+@media (width > $breakpoint-xl) {
+	.container {
+		max-width: $containers-xl;
+		padding: 0 1rem;
+	}
+}
+
+@media (width > $breakpoint-xxl) {
+	.container {
+		max-width: $containers-xxl;
+		padding: 0 1rem;
+	}
+}
