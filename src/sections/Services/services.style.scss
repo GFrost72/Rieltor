@@ -1,0 +1,157 @@
+@import "styles/config/variables";
+
+.services {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 40px 0px 40px 0px;
+}
+
+.services__top {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding: 0px;
+	align-items: center;
+}
+
+.services__bot {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0px;
+	margin-bottom: 70px;
+}
+
+.services__top-desc {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0px;
+	font-family: Russo One;
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 60px;
+	color: #22b4e1;
+
+	@media (width <= $breakpoint-xl) {
+		font-size: 38px;
+	}
+
+	// @media (width <= $breakpoint-md) {
+	// 	font-size: 8px;
+	// }
+
+	// @media (width <= $breakpoint-sm) {
+	// 	font-size: 8px;
+	// }
+}
+
+.services__top-title {
+	display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+padding: 0px;
+	font-family: Russo One;
+	font-size: 80px;
+    font-weight: 400;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 56px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 34px;
+
+	@media (width <= $breakpoint-xl) {
+		font-size: 50px;
+	}
+}
+
+.services__bot-article {
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	background: rgba(255, 255, 255, 0.05);
+	gap: 20px;
+
+	@media (width <= $breakpoint-xl) {
+		max-width: 280px;
+	}
+}
+
+.services__bot-article-title {
+	color: rgb(34, 180, 225);
+font-family: "Russo One";
+font-size: 32px;
+line-height: 24px;
+letter-spacing: 0%;
+text-align: center;
+text-transform: uppercase;
+margin-bottom: 20px;
+
+@media (width <= $breakpoint-xl) {
+	font-size: 20px;
+}
+}
+
+.services__bot-article-list {
+
+}
+
+
+.services__bot-article-item {
+	margin-bottom: 18px;
+	font-size: 18px;
+	display: flex;
+    align-items: center;
+	font-family: Russo One;
+    font-weight: 700;
+
+	@media (width <= $breakpoint-xl) {
+		font-size: 12px;
+	}
+}
+
+.services__bot-article-item::before {
+    content: ''; /* Добавляем пустое содержимое */
+    display: inline-block;
+    width: 10px; /* Ширина маркера */
+    height: 10px; /* Высота маркера */
+    background-color: $main-primary;
+    border-radius: 50%; /* Делаем маркер круглым */
+    margin-right: 10px; /* Отступ между маркером и текстом */
+}
+
+
+.services__bot-article-desc {
+	font-size: 24px;
+	font-weight: 700;
+	max-width: 350px;
+	text-align: center;
+
+	@media (width <= $breakpoint-xl) {
+		font-size: 18px;
+	}
+}
+
+.center-container {
+    display: flex;
+    justify-content: center; /* Выравнивание по горизонтали */
+}
+
+
+.services-btn {
+	background-color: #22B4E1;
+	color: #fff;
+	padding: 10px 24px;
+	border-radius: 20px;
+	font-size: 24px;
+	font-family: Russo One;
+	font-weight: 700;
+
+}

@@ -79,6 +79,7 @@
 	font-size: 1.667rem;
 	color: $text-color-secondary;
 	font-family: $font-secondary;
+	font-weight: 700;
 
 	@media (width <= $breakpoint-xxl) {
 		font-size: 1.111rem;
@@ -101,6 +102,7 @@
 
 .logo-text-two {
 	color: $text-color-primary;
+	color: #ffffffd4;
 
 	@media (width <= $breakpoint-xxl) {
 		font-size: 0.667rem;
@@ -229,6 +231,7 @@
 	color: white;
 	margin-right: 30px;
 	font-family: $font-secondary;
+	font-weight: 700;
 
 	@media (width <= $breakpoint-xxl) {
 		font-size: 16px;

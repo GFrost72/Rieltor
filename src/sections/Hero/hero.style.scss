@@ -103,7 +103,7 @@
 	font-size: 70px;
 	color: $text-color-primary;
 	z-index: 2;
-	font-weight: 400;
+    font-weight: 700;
 	font-family: $font-secondary;
 
 	// TODO: отрефакторить
@@ -127,7 +127,7 @@
 	color: $text-color-secondary;
 	z-index: 1;
 	font-size: 112px;
-	font-weight: 400;
+	font-weight: 700;
 
 	// TODO: отрефакторить
 	@media (max-width: 1280px) {
@@ -151,7 +151,7 @@
 	z-index: 1;
 	color: $text-color-primary;
 	font-size: 40px;
-	font-weight: 400;
+	font-weight: 700;
 	letter-spacing: 5.6px;
 	margin-bottom: 55px;
 
