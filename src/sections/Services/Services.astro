@@ -1,5 +1,31 @@
 ---
 import "./services.style.scss";
+
+const serviceListSold = [
+	'Юридическая консультация',
+	'Оценка рыночной стоимости',
+	'Профессиональная фото-съёмка квартиры',
+	'Реклама',
+	'Поиск покупателя',
+	'Сопровождение сделки',
+];
+
+const serviceListBuy = [
+	'Юридическая консультация',
+	'Одобрение ипотеки',
+	'Поиск квартиры/дома',
+	'Сопровождение сделки',
+	'Страхование ипотеки',
+	'Консультация',
+]
+
+const serviceListNewBuilding = [
+	'Подбор квартиры в новостройке',
+	'Одобрение ипотеки',
+	'Только проверенные застройщики',
+	'Дистанционная сделка',
+	'Помощь в приёме квартиры',
+]
 ---
 
 <section class="services">
@@ -12,20 +38,11 @@ import "./services.style.scss";
 			<article class="services__bot-article">
 				<h3 class="services__bot-article-title">ПРОДАЖА</h3>
 				<ul class="services__bot-article-list">
-					<li class="services__bot-article-item">
-						Юридическая консультация
-					</li>
-					<li class="services__bot-article-item">
-						Оценка рыночкной стоимости
-					</li>
-					<li class="services__bot-article-item">
-						Профессиональная фото-съёмка квартиры
-					</li>
-					<li class="services__bot-article-item">Реклама</li>
-					<li class="services__bot-article-item">Поиск покупателя</li>
-					<li class="services__bot-article-item">
-						Сопровождение сделки
-					</li>
+					{
+						serviceListSold.map((serviceTitle) => (
+							<li class="services__bot-article-item">{ serviceTitle }</li>
+						))
+					}
 				</ul>
 				<span
 					class="services__bot-article-desc"
@@ -40,50 +57,23 @@ import "./services.style.scss";
 			<article class="services__bot-article">
 				<h3 class="services__bot-article-title">ПОКУПКА</h3>
 				<ul class="services__bot-article-list">
-					<li class="services__bot-article-item">
-						Юридическая консультация
-					</li>
-					<li class="services__bot-article-item">
-						Одобрение ипотеки
-					</li>
-					<li class="services__bot-article-item">
-						Поиск квартиры/дома
-					</li>
-					<li class="services__bot-article-item">
-						Сопровождение сделки
-					</li>
-					<li class="services__bot-article-item">
-						Страхование ипотеки
-					</li>
-					<li class="services__bot-article-item">
-						Консультация
-					</li>
+					{
+						serviceListBuy.map((serviceTitle) => (
+							<li class="services__bot-article-item">{ serviceTitle }</li>
+						))
+					}
 				</ul>
 				<span class="services__bot-article-desc">
-					<span class="accent">30 000 руб.</span> + <span
-						class="accent">1%</span
-					> от стоимости объекта недвижимости</span
-				>
+				<span class="accent">30 000 руб.</span> + <span class="accent">1%</span> от стоимости объекта недвижимости</span>
 			</article>
 			<article class="services__bot-article">
 				<h3 class="services__bot-article-title">НОВОСТРОЙКИ</h3>
 				<ul class="services__bot-article-list">
-					<li class="services__bot-article-item">
-						Подбор квартиры в новостройке
-					</li>
-					<li class="services__bot-article-item">
-						Одобрение ипотеки
-					</li>
-					<li class="services__bot-article-item">
-						Только проверенные застройщики
-					</li>
-					<li class="services__bot-article-item">
-						Дистанционная сделка
-					</li>
-					<li class="services__bot-article-item">Скидка на ремонт</li>
-					<li class="services__bot-article-item">
-						Помощь в приёме квартиры
-					</li>
+					{
+						serviceListNewBuilding.map((serviceTitle) => (
+							<li class="services__bot-article-item">{ serviceTitle }</li>
+						))
+					}
 				</ul>
 				<span class="services__bot-article-desc accent">БЕСПЛАТНО</span>
 			</article>

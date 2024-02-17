@@ -77,6 +77,9 @@ $containers-xl: 960px;
 $containers-xxl: 1400px;
 
 /*** FONTS ***/
-$font-primary: "Play", "Arial", san-serif, serif;
-$font-secondary: "Russo One", "Arial", san-serif, serif;
+$font-primary-name: "Play";
+$font-secondary-name: "Russo One";
+
+$font-primary: $font-primary-name, "Arial", san-serif, serif;
+$font-secondary: $font-secondary-name, "Arial", san-serif, serif;
 $font-size-base: 16px;

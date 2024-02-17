@@ -5,15 +5,14 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	padding: 40px 0px 40px 0px;
+	padding: 40px 0 40px 0;
 }
 
 .services__top {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	align-items: flex-start;
-	padding: 0px;
+	padding: 0;
 	align-items: center;
 }
 
@@ -21,7 +20,7 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	padding: 0px;
+	padding: 0;
 	margin-bottom: 70px;
 }
 
@@ -30,12 +29,12 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	padding: 0px;
-	font-family: Russo One;
+	padding: 0;
+	font-family: $font-secondary;
 	font-size: 30px;
 	font-weight: 700;
 	line-height: 60px;
-	color: #22b4e1;
+	color: $text-color-secondary;
 
 	@media (width <= $breakpoint-xl) {
 		font-size: 38px;
@@ -52,13 +51,12 @@
 
 .services__top-title {
 	display: flex;
-flex-direction: column;
-justify-content: flex-start;
-align-items: center;
-padding: 0px;
-	font-family: Russo One;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0;
+	font-family: $font-secondary;
 	font-size: 80px;
-    font-weight: 400;
     font-weight: 600;
     letter-spacing: 0;
     line-height: 56px;
@@ -85,14 +83,14 @@ padding: 0px;
 }
 
 .services__bot-article-title {
-	color: rgb(34, 180, 225);
-font-family: "Russo One";
-font-size: 32px;
-line-height: 24px;
-letter-spacing: 0%;
-text-align: center;
-text-transform: uppercase;
-margin-bottom: 20px;
+	color: $text-color-secondary;
+	font-family: $font-secondary;
+	font-size: 32px;
+	line-height: 24px;
+	letter-spacing: 0%;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 20px;
 
 @media (width <= $breakpoint-xl) {
 	font-size: 20px;
@@ -109,7 +107,7 @@ margin-bottom: 20px;
 	font-size: 18px;
 	display: flex;
     align-items: center;
-	font-family: Russo One;
+	font-family: $font-secondary;
     font-weight: 700;
 
 	@media (width <= $breakpoint-xl) {
@@ -146,12 +144,12 @@ margin-bottom: 20px;
 
 
 .services-btn {
-	background-color: #22B4E1;
-	color: #fff;
+	background-color: $background-secondary;
+	color: $text-color-primary;
 	padding: 10px 24px;
 	border-radius: 20px;
 	font-size: 24px;
-	font-family: Russo One;
+	font-family: $font-secondary;
 	font-weight: 700;
 
 }
