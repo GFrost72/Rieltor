@@ -12,20 +12,20 @@
 	/* Новое свойство для ограничения ширины .hero */
 	/* Центрирование .hero по горизонтали */
 
-	@media (width <= $breakpoint-xxl) {
+	@media (width <=$breakpoint-xxl) {
 		min-height: 680px;
 	}
 
-	@media (width <= $breakpoint-xl) {
+	@media (width <=$breakpoint-xl) {
 		min-height: 680px;
 	}
 
-	@media (width <= $breakpoint-md) {
+	@media (width <=$breakpoint-md) {
 		min-height: $breakpoint-sm;
 	}
 
-	@media (width <= $breakpoint-sm) {
-		min-height: 380px;
+	@media (width <=$breakpoint-sm) {
+		min-height: 240px;
 	}
 
 
@@ -34,6 +34,17 @@
 		min-height: 165px;
 		background-repeat: round;
 	}
+}
+
+.hero-wrapper {
+	@media (max-width: $breakpoint-ls) {
+		padding: 20px;
+	}
+
+	@media (max-width: $breakpoint-sm) {
+		padding: 8px;
+	}
+
 }
 
 
@@ -54,28 +65,32 @@
 	right: 0;
 	height: 600px;
 
-	@media (width <= $breakpoint-xxl) {
+	@media (width <=$breakpoint-xxl) {
 		height: 500px;
 	}
 
-	@media (width <= $breakpoint-xl) {
+	@media (width <=$breakpoint-xl) {
 		height: 400px;
 	}
 
-	@media (width <= $breakpoint-md) {
-		height: 130px;
+	@media (width <=$breakpoint-md) {
+		height: 235px;
 	}
 
-	// TODO: отрефакторить
-	@media (width <= 320px) {
-		height: 300px;
+	@media (width <=330px) {
+		height: 205px;
 	}
 }
 
-.person-face > img {
+.person-face>img {
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
+
+	@media (width <=$breakpoint-md) {
+		height: 101%;
+	}
+
 }
 
 
@@ -84,17 +99,13 @@
 	flex-direction: column;
 	align-items: flex-start;
 
-	// TODO: отрефакторить
-	@media (max-width: 1280px) {
-		/*padding: 220px 0 140px 140px;*/
-	}
 
 	@media (max-width: $breakpoint-md) {
-		/*padding: 120px 0 0 90px;*/
+		padding: 5px 60px;
 	}
 
-	@media (max-width: $breakpoint-sm) {
-		/*padding: 55px 0 25px 35px;*/
+	@media (max-width: $breakpoint-ls) {
+		padding: 0;
 	}
 }
 
@@ -103,7 +114,7 @@
 	font-size: 70px;
 	color: $text-color-primary;
 	z-index: 2;
-    font-weight: 700;
+	font-weight: 400;
 	font-family: $font-secondary;
 
 	// TODO: отрефакторить
@@ -114,6 +125,11 @@
 
 	@media (max-width: $breakpoint-md) {
 		font-size: 30px;
+	}
+
+	@media (max-width: $breakpoint-ls) {
+		font-size: 22px;
+		margin-bottom: 2px;
 	}
 
 	@media (max-width: $breakpoint-sm) {
@@ -127,7 +143,7 @@
 	color: $text-color-secondary;
 	z-index: 1;
 	font-size: 112px;
-	font-weight: 700;
+	font-weight: 400;
 
 	// TODO: отрефакторить
 	@media (max-width: 1280px) {
@@ -137,7 +153,12 @@
 
 	@media (max-width: $breakpoint-md) {
 		font-size: 50px;
-		margin-bottom: 10px;
+		margin-bottom: 0px;
+	}
+
+	@media (max-width: $breakpoint-ls) {
+		font-size: 30px;
+		margin-bottom: 4px;
 	}
 
 	@media (max-width: $breakpoint-sm) {
@@ -151,9 +172,9 @@
 	z-index: 1;
 	color: $text-color-primary;
 	font-size: 40px;
-	font-weight: 700;
+	font-weight: 400;
 	letter-spacing: 5.6px;
-	margin-bottom: 55px;
+    margin-bottom: 25px;
 
 	// TODO: отрефакторить
 	@media (max-width: 1280px) {
@@ -164,9 +185,14 @@
 		margin-bottom: 20px;
 	}
 
+	@media (max-width: $breakpoint-ls) {
+		font-size: 14px;
+		margin-bottom: 12px;
+	}
+
 	@media (max-width: $breakpoint-sm) {
 		font-size: 10px;
-		margin-bottom: 0;
+		margin-bottom: 14px;
 	}
 }
 
@@ -182,13 +208,13 @@
 	border-radius: 20px;
 
 	@media (max-width: $breakpoint-md) {
-		padding: 8px 8px;
+		padding: 5px;
 		gap: 10px;
 	}
 
-	@media (max-width: $breakpoint-sm) {
-		padding: 3px 6px;
-		gap: 4px;
+	@media (max-width: $breakpoint-ls) {
+		padding: 6px 12px;
+		gap: 10px;
 	}
 }
 
@@ -211,6 +237,11 @@
 		height: 20px;
 	}
 
+	@media (max-width: $breakpoint-ls) {
+		height: 17px;
+		width: 15.479px;
+	}
+
 	@media (max-width: $breakpoint-sm) {
 		width: 13.479px;
 		height: 15px;
@@ -223,35 +254,43 @@
 	font-size: 28px;
 	font-weight: 400;
 
-	// TODO: отрефакторить
 	@media (max-width: 1280px) {
 		font-size: 14px;
 	}
 
-	@media (max-width: $breakpoint-sm) {
-		.hero-btn-text {
-			font-size: 8px;
-		}
+	@media (max-width: $breakpoint-ls) {
+		font-size: 8px;
 	}
 
+	@media (max-width: $breakpoint-sm) {
+		font-size: 10px;
+		padding: 2px;
+	}
 }
 
 
 .hero-btn-block {
 	display: flex;
 	align-items: center;
-	gap: 40px;
+	gap: 60px;
 	flex-wrap: wrap;
 	max-width: 60rem;
 
 	@media (max-width: $breakpoint-md) {
-		gap: 18px;
+		gap: 10px;
+		align-items: baseline;
+		flex-direction: column;
 		/*min-width: 145%;*/
 	}
 
-	@media (max-width: $breakpoint-sm) {
-		gap: 8px;
+	@media (max-width: $breakpoint-ls) {
+	    gap: 15px;
 	}
+
+	@media (max-width: $breakpoint-sm) {
+		gap: 20px;
+	}
+
 
 }
 
@@ -259,26 +298,37 @@
 .hero-desc {
 	flex: 1 0 0;
 	color: $text-color-primary;
-	font-size: 20px;
-	line-height: 28px;
+	font-size: 28px;
+	line-height: 44px;
 	z-index: 1;
 	margin: 0;
+	min-width: 460px;
 
-	@media (max-width: 1280px) {
-		font-size: 14px;
-		max-width: 40%;
+	@media (max-width: $breakpoint-xl) {
+		max-width: 410px;
+		font-size: 22px;
+		line-height: 2.2rem;
+		min-width: 440px;
 	}
+
 
 	@media (max-width: $breakpoint-md) {
-		line-height: 26px;
+		line-height: 24px;
+		min-width: 380px;
+		font-size: 18px;
 	}
+
+	@media (max-width: $breakpoint-ls) {
+		line-height: 21px;
+		min-width: 268px;
+		font-size: 12px;
+	}
+
 
 	@media (max-width: $breakpoint-sm) {
+		min-width: 187px;
+		line-height: 2;
 		font-size: 8px;
-		line-height: 14px;
 	}
 
-	@media (max-width: 370px) {
-		max-width: 120px;
-	}
 }

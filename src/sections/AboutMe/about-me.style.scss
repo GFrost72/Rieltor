@@ -1,10 +1,5 @@
 @import "styles/config/variables";
 
-
-.about-me {
-
-}
-
 .about-me__wrapper {
 	padding-top: 2rem;
 	display: flex;
@@ -13,6 +8,7 @@
 	@media (max-width: $breakpoint-md) {
 		flex-direction: column;
 		gap: 22px;
+		padding-bottom: 30px;
 	}
 
 	// TODO: рефактор
@@ -61,7 +57,6 @@
 
 .my-name__second-title {
 	font-size: 30px;
-	font-weight: 400;
 	color: $text-color-secondary;
 	margin-bottom: 8px;
 	text-transform: uppercase;
@@ -74,8 +69,8 @@
 		font-size: 20px;
 	}
 
-	@media (max-width: $breakpoint-sm) {
-		font-size: 10px;
+	@media (max-width: $breakpoint-ls) {
+		font-size: 12px;
 		margin-bottom: 5px;
 	}
 }
@@ -111,8 +106,8 @@
 		font-size: 32px;
 	}
 
-	@media (max-width: $breakpoint-sm) {
-		font-size: 12px;
+	@media (max-width: $breakpoint-ls) {
+		font-size: 18px;
 		padding-top: 8px;
 	}
 
@@ -129,8 +124,8 @@
 		font-size: 16px;
 	}
 
-	@media (max-width: $breakpoint-sm) {
-		font-size: 9px;
+	@media (max-width: $breakpoint-ls) {
+		font-size: 12px;
 	}
 }
 
@@ -146,9 +141,9 @@
 		line-height: 25px;
 	}
 
-	@media (max-width: $breakpoint-sm) {
-		font-size: 8px;
-		line-height: 13px;
+	@media (max-width: $breakpoint-ls) {
+		font-size: 10px;
+		line-height: 16px;
 	}
 }
 
@@ -158,10 +153,12 @@
 	flex-wrap: wrap;
 	gap: 40px;
 	justify-content: center;
-	/* Центрирование по горизонтали */
+
+	@media (max-width: $breakpoint-ls) {
+		gap: 25px;
+	}
 
 	@media (max-width: $breakpoint-sm) {
-		flex-direction: column;
 		gap: 10px;
 	}
 }
@@ -251,8 +248,8 @@
 		font-size: 14px;
 	}
 
-	@media (max-width: $breakpoint-sm) {
-		font-size: 8px;
+	@media (max-width: $breakpoint-ls) {
+		font-size: 10px;
 	}
 }
 
@@ -269,6 +266,11 @@
 
 	@media (max-width: $breakpoint-md) {
 		font-size: 40px;
+	}
+
+	@media (max-width: $breakpoint-ls) {
+		margin-bottom: 15px;
+		font-size: 18px;
 	}
 
 	@media (max-width: $breakpoint-sm) {
@@ -290,8 +292,8 @@
 .about-image {
 	background-image: url("assets/img/about-image.webp");
 	/* width: 920px; */
-	height: 593px;
-	background-size: cover;
+	height: 473px;
+	background-size: contain;
 	background-repeat: no-repeat;
 	flex: 0 0 50%; /* Set flex-basis to 50% */
 	display: flex;
@@ -299,6 +301,20 @@
 	align-content: flex-start;
 	gap: 10px;
 	flex-wrap: wrap;
+
+	@media (max-width: $breakpoint-xl) {
+		height: 325px;
+	}
+
+	@media (max-width: $breakpoint-xl) {
+		height: 265px;
+	}
+
+	@media (max-width: $breakpoint-ls) {
+		height: 280px;
+	}
+
+   
 }
 
 
@@ -320,16 +336,35 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 77px;
+	gap: 11px;
 	flex-wrap: wrap;
-	padding: 48px;
+	padding: 24px;
+
+	@media (max-width: $breakpoint-xl) {
+		gap: 15px;
+		padding: 29px;
+	}
+
+	@media (max-width: $breakpoint-md) {
+		padding: 11px;
+	}
 }
 
 .my-xp-content__top {
 	display: flex;
 	align-items: center;
-	gap: 50px;
+	gap: 80px;
 	flex: 1 0 0;
+
+	
+
+	@media (max-width: $breakpoint-md) {
+		gap: 200px;
+	}
+
+	@media (max-width: $breakpoint-ls) {
+		gap: 60px;
+	}
 }
 
 .content__top-titles {
@@ -339,6 +374,10 @@
 	align-items: flex-start;
 	gap: 8px;
 	flex: 1 0 0;
+
+	@media (max-width: $breakpoint-md) {
+	height: auto;
+	}
 }
 
 .top-titles__desc {
@@ -356,11 +395,44 @@
 	font-weight: 400;
 	font-size: 30px;
 	text-transform: uppercase;
-	font-family: $font-secondary
+	font-family: $font-secondary;
+
+	@media (max-width: $breakpoint-xl) {
+		font-size: 30px;
+	}
+
+	@media (max-width: $breakpoint-md) {
+		font-size: 18px;
+	}
+
+	@media (max-width: $breakpoint-ls) {
+		font-size: 16px;
+	}
+
+
 }
 
 .content-desc {
 	line-height: 36px;
+
+	@media (max-width: $breakpoint-md) {
+		font-size: 14px;
+		line-height: 30px;
+	}
+
+	@media (max-width: $breakpoint-ls) {
+		line-height: 24px;
+		font-size: 12px;
+		min-width: 177px;
+	}
+
+	@media (max-width: $breakpoint-sm) {
+		line-height: 24px;
+		font-size: 10px;
+		min-width: 177px;
+	}
+
+
 }
 
 .top-titles-second {
@@ -371,7 +443,20 @@
 	font-weight: 400;
 	font-size: 80px;
 	text-transform: uppercase;
-	font-family: $font-secondary
+	font-family: $font-secondary;
+
+	@media (max-width: $breakpoint-xl) {
+		font-size: 50px;
+	}
+
+	@media (max-width: $breakpoint-md) {
+		font-size: 28px;
+	}
+
+	@media (max-width: $breakpoint-ls) {
+		font-size: 26px;
+	}
+
 }
 
 .my-xp-content__bot {
@@ -379,8 +464,14 @@
 	justify-content: center;
 	align-items: center;
 	align-content: center;
-	gap: 18px;
+	gap: 57px;
 	flex-wrap: wrap;
+
+	@media (max-width: $breakpoint-md) {
+		gap: 8px;
+	}
+
+
 }
 
 .content__bot-numbers {
@@ -388,25 +479,53 @@
 	width: 211.174px;
 	flex-direction: column;
 	justify-content: center;
-	align-items: flex-start;
-	gap: 15px;
+	align-items: center;
+	gap: 6px;
 	flex: 1 0 0;
+
+	@media (max-width: $breakpoint-md) {
+		gap: 0px;
+	}
+
+	@media (max-width: $breakpoint-ls) {
+		align-items: center;
+	}
+
 }
 
 .bot-numbers__number {
 	color: $text-color-secondary;
 	font-weight: 400;
-	font-size: 54px;
+	font-size: 47px;
 	text-transform: uppercase;
-	font-family: $font-secondary
+	font-family: $font-secondary;
+
+	@media (max-width: $breakpoint-xl) {
+		font-size: 30px;
+	}
+
+	@media (max-width: $breakpoint-ls) {
+		font-size: 20px;
+	}
+
 }
 
 .bot-numbers__desc {
 	display: flex;
-	width: 211.174px;
 	height: 25px;
 	flex-direction: column;
 	justify-content: center;
-	font-size: 20px;
-	font-weight: 400;
+	font-size: 15px;
+	text-transform: uppercase;
+	color: $main-accent;
+	font-family: $font-secondary-name;
+
+	@media (max-width: $breakpoint-md) {
+		font-size: 12px;
+	}
+
+	@media (max-width: $breakpoint-ls) {
+		font-size: 8px;
+		max-width: 115px;
+	}
 }
