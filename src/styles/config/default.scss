@@ -15,15 +15,16 @@ html {
 // CONTAINER
 
 .container {
-	width: 100%;
+	width: -webkit-fill-available;
 	padding: 0 1rem;
 	margin: 0 auto;
 }
 
-@media (width > $breakpoint-md) {
+@media (width <= $breakpoint-md) {
 	.container {
 		max-width: $containers-md;
 		padding: 0 1rem;
+		
 	}
 }
 
@@ -48,3 +49,10 @@ h1,h2 {
 	font-family: "Russo One";
 	font-weight: 700;
 }
+
+// h2 {
+// 	@media (max-width: $breakpoint-ls) {
+// 		font-size: 30px;
+// }
+// }
+

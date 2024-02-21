@@ -5,7 +5,7 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	padding: 40px 0 40px 0;
+	padding: 2rem 0;
 }
 
 .services__top {
@@ -55,8 +55,8 @@
 	}
 
 	@media (width <= $breakpoint-ls) {
-		font-size: 16px;
-		line-height: 0px;
+		font-size: 20px;
+		line-height: 28px;
 		margin-bottom: 0px;
 	}
 
@@ -90,9 +90,9 @@
 	}
 
 	@media (width <= $breakpoint-ls) {
-		font-size: 20px;
-		margin-bottom: 8px;
-		line-height: 48px;
+	    font-size: 26px;
+		line-height: 36px;
+		margin-bottom: 16px;
 	}
 
 }
@@ -113,13 +113,13 @@
 	}
 
 	@media (width <= $breakpoint-md) {
-		padding: 8px;
+		padding: 27px 10px 20px 10px;
 		max-width: 245px;
 	}
 
 	@media (width <= $breakpoint-ls) {
 	    min-width: 260px;
-		padding: 25px 15px 15px 10px;
+		padding: 10px 15px 15px 10px;
 		margin-bottom: 16px;
 	}
 
@@ -148,7 +148,9 @@
 }
 
 @media (width <= $breakpoint-ls) {
-		margin-bottom: 10px;
+	margin-bottom: 6px;
+	font-size: 18px;
+	line-height: 26px;
 }
 }
 
@@ -166,7 +168,7 @@
 	}
 
 	@media (width <= $breakpoint-ls) {
-		font-size: 12px;
+		font-size: 14px;
 		margin-bottom: 10px;
 		min-width: 247px;
 	}
@@ -200,7 +202,7 @@
 	}
 
 	@media (width <= $breakpoint-ls) {
-		font-size: 14px;
+		font-size: 16px;
 	}
 
 }
@@ -212,6 +214,20 @@
 
 	@media (width <= $breakpoint-xl) {
 		font-size: 14px;
+	}	
+
+	@media (width <= $breakpoint-ls) {
+		font-size: 18px;
+	}	
+
+
+}
+
+.article-item__bottom:last-child {
+	margin-bottom: 68px;
+
+	@media (width <= $breakpoint-ls) {
+		margin-bottom: 12px;
 	}	
 
 }

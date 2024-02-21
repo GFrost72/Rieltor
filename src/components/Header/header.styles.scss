@@ -60,7 +60,7 @@
 	@media (width <= $breakpoint-md) {
 		width: 56px;
 		height: 47px;
-		margin-right: 15px;
+		margin-right: 10px;
 	}
 
 	@media (width <= $breakpoint-sm) {
@@ -149,6 +149,7 @@
 	@media (width <= $breakpoint-sm) {
 		width: 19px;
 		height: 19px;
+		padding: 4px;
 	}
 }
 
@@ -205,7 +206,7 @@
 	}
 
 	@media (width <= $breakpoint-md) {
-		font-size: 8px;
+		font-size: 20px;
 	}
 
 	@media (width <= $breakpoint-sm) {
@@ -242,6 +243,11 @@
 	}
 
 	@media (width <= $breakpoint-md) {
+		font-size: 18px;
+		margin-right: 10px;
+	}
+
+	@media (width <= $breakpoint-ls) {
 		font-size: 12px;
 		margin-right: 12px;
 	}
@@ -259,22 +265,33 @@
 
 .burger-menu {
 	display: none;
-
 	flex-direction: column;
 	align-items: center;
 	cursor: pointer;
-	padding: 10px;
 	order: 3;
 	margin-right: 15px;
 	cursor: pointer;
 
+	
 	@media (width <= $breakpoint-md) {
 		display: flex;
+		margin-right: 20px;
+	}
+
+	@media (width <= $breakpoint-ls) {
+		    margin-right: 5px;
+	}
+
+	@media (min-width: 375px) {
+		margin-right: 0;
 	}
 
 	@media (width <= $breakpoint-sm) {
-		margin-right: 10px;
+		margin-right: -5px;
+		padding: 2px;
 	}
+
+
 
 	// TODO: отрефакторить
 	& div {
@@ -306,10 +323,11 @@
 	right: 0;
 	background-color: $background-extra;
 	padding: 15px;
-	z-index: 1;
+	z-index: 3;
+	top: -14px;
 
 	@media (width <= $breakpoint-md) {
-		right: -19px;
+		right: 0px;
 	}
 
 	@media (width <= $breakpoint-sm) {
@@ -319,11 +337,11 @@
 	
 	
 	& a {
+		color: #fff;
 		display: block;
-		color: $text-color-primary;
+		height: 50px;
+		margin-bottom: 8px;
 		text-decoration: none;
-		margin-bottom: 10px;
-		height: 30px;
 
 
 		@media (width <= $breakpoint-sm) {

@@ -52,6 +52,12 @@
 		min-width: auto;
 		padding: 16px 8px 8px;
 	}
+
+	@media (max-width: $breakpoint-ls) {
+		padding: 16px;
+	}
+
+
 }
 
 
@@ -70,7 +76,7 @@
 	}
 
 	@media (max-width: $breakpoint-ls) {
-		font-size: 12px;
+		font-size: 18px;
 		margin-bottom: 5px;
 	}
 }
@@ -107,7 +113,7 @@
 	}
 
 	@media (max-width: $breakpoint-ls) {
-		font-size: 18px;
+		font-size: 22px;
 		padding-top: 8px;
 	}
 
@@ -118,14 +124,14 @@
 	color: $text-color-secondary;
 	text-align: center;
 	font-size: 18px;
-	font-weight: 400;
+	font-weight: 700;
 
 	@media (max-width: $breakpoint-xl) {
 		font-size: 16px;
 	}
 
 	@media (max-width: $breakpoint-ls) {
-		font-size: 12px;
+		font-size: 18px;
 	}
 }
 
@@ -142,8 +148,8 @@
 	}
 
 	@media (max-width: $breakpoint-ls) {
-		font-size: 10px;
-		line-height: 16px;
+		font-size: 16px;
+		line-height: 24px;
 	}
 }
 
@@ -155,7 +161,7 @@
 	justify-content: center;
 
 	@media (max-width: $breakpoint-ls) {
-		gap: 25px;
+		gap: 14px;
 	}
 
 	@media (max-width: $breakpoint-sm) {
@@ -174,10 +180,18 @@
 	max-width: calc(50% - 40px);
 	/* Максимальная ширина карточки */
 
+	@media (max-width: $breakpoint-ls) {
+		max-width: calc(50% - 12px);
+		gap: 12px;
+	}
+
 	@media (max-width: $breakpoint-sm) {
 		max-width: calc(119% - 20px);
 		gap: 6px;
 	}
+	
+
+
 }
 
 
@@ -249,7 +263,7 @@
 	}
 
 	@media (max-width: $breakpoint-ls) {
-		font-size: 10px;
+		font-size: 14px;
 	}
 }
 
@@ -269,8 +283,8 @@
 	}
 
 	@media (max-width: $breakpoint-ls) {
-		margin-bottom: 15px;
-		font-size: 18px;
+		font-size: 30px;
+		margin-bottom: 10px;
 	}
 
 	@media (max-width: $breakpoint-sm) {
@@ -306,7 +320,7 @@
 		height: 325px;
 	}
 
-	@media (max-width: $breakpoint-xl) {
+	@media (max-width: $breakpoint-md) {
 		height: 265px;
 	}
 
@@ -359,11 +373,15 @@
 	
 
 	@media (max-width: $breakpoint-md) {
-		gap: 200px;
+		gap: 60px;
 	}
 
 	@media (max-width: $breakpoint-ls) {
-		gap: 60px;
+		gap: 35px;
+	}
+
+	@media (max-width: $breakpoint-sm) {
+		gap: 25px;
 	}
 }
 
@@ -402,28 +420,35 @@
 	}
 
 	@media (max-width: $breakpoint-md) {
-		font-size: 18px;
+		font-size: 24px;
 	}
 
 	@media (max-width: $breakpoint-ls) {
-		font-size: 16px;
+		font-size: 22px;
 	}
 
-
+	@media (max-width: $breakpoint-sm) {
+		font-size: 14px;
+	}
 }
 
 .content-desc {
-	line-height: 36px;
+    color: #afafaf;
+    line-height: 45px;
+    font-size: 28px;
+    margin-bottom: 28px;
+	color: #afafaf;
 
 	@media (max-width: $breakpoint-md) {
-		font-size: 14px;
+		font-size: 20px;
 		line-height: 30px;
 	}
 
 	@media (max-width: $breakpoint-ls) {
-		line-height: 24px;
 		font-size: 12px;
-		min-width: 177px;
+		line-height: 20px;
+		min-width: 204px;
+		margin-bottom: 0px;
 	}
 
 	@media (max-width: $breakpoint-sm) {
@@ -431,8 +456,10 @@
 		font-size: 10px;
 		min-width: 177px;
 	}
+}
 
-
+.content-desc__white {
+	color: #fff;
 }
 
 .top-titles-second {
@@ -441,7 +468,7 @@
 	justify-content: center;
 	color: $text-color-primary;
 	font-weight: 400;
-	font-size: 80px;
+    font-size: 68px;
 	text-transform: uppercase;
 	font-family: $font-secondary;
 
@@ -450,13 +477,16 @@
 	}
 
 	@media (max-width: $breakpoint-md) {
-		font-size: 28px;
+		font-size: 40px;
 	}
 
 	@media (max-width: $breakpoint-ls) {
-		font-size: 26px;
+		font-size: 30px;
 	}
 
+	@media (max-width: $breakpoint-sm) {
+		font-size: 22px;
+	}
 }
 
 .my-xp-content__bot {
@@ -505,7 +535,7 @@
 	}
 
 	@media (max-width: $breakpoint-ls) {
-		font-size: 20px;
+		font-size: 26px;
 	}
 
 }
@@ -529,3 +559,6 @@
 		max-width: 115px;
 	}
 }
+
+
+
