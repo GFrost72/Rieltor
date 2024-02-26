@@ -354,6 +354,7 @@
 	flex-wrap: wrap;
 	padding: 24px;
 
+
 	@media (max-width: $breakpoint-xl) {
 		gap: 15px;
 		padding: 29px;
@@ -424,7 +425,7 @@
 	}
 
 	@media (max-width: $breakpoint-ls) {
-		font-size: 22px;
+		font-size: 20px;
 	}
 
 	@media (max-width: $breakpoint-sm) {
