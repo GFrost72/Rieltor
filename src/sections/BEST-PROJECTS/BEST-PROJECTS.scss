@@ -1,5 +1,4 @@
 .swiper-slide {
-
 	img {
 		background-size: contain;
 		background-repeat: no-repeat;
@@ -10,6 +9,9 @@
 	}
 	}
 
+.swiper-wrapper {
+	opacity: 50%;
+}
 
 
 .swiper-slide-1 {
