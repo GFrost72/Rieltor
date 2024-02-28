@@ -1,14 +1,26 @@
 {
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
-    "baseUrl": "./src",
+    "baseUrl": "/Users/sinner93/Development/Rieltor/src",
     "paths": {
-      "@styles/*": ["styles/*"],
-      "@pages/*": ["pages/*"],
-      "@components/*": ["components/*"],
-      "@sections/*": ["sections/*"],
-      "@layouts/*": ["./layouts/*"]
-    }
+      "@styles/*": [
+        "styles/*"
+      ],
+      "@pages/*": [
+        "pages/*"
+      ],
+      "@components/*": [
+        "components/*"
+      ],
+      "@sections/*": [
+        "sections/*"
+      ],
+      "@layouts/*": [
+        "./layouts/*"
+      ]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   },
   "include": [
     "src"

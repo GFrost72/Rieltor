@@ -1,39 +1,56 @@
 ---
-import './BEST-PROJECTS.scss'
+import './BEST-PROJECTS.scss';
+import { SwiperSlider } from './swiper-slider';
 
-
+const slideSources = [
+	{
+		src: 'assets/img/slide-1.webp',
+		alt: 'slide 1'
+	},
+	{
+		src: 'assets/img/slide-2.webp',
+		alt: 'slide 2'
+	},
+	{
+		src: 'assets/img/slide-3.webp',
+		alt: 'slide 3'
+	},
+]
 ---
-
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <script src="./slider.js"></script>
 
 
 <section class="best-projects">
-	<div class="swiper">
-	  <!-- Additional required wrapper -->
-	  <div class="swiper-wrapper">
-		<!-- Slides -->
-		<div class="swiper-slide">
-		  slide 1
-		  <img class="image-1" src="assets/img/slide-1.webp" />
-		</div>
-		<div class="swiper-slide">
-			<img class="image-2" src="assets/img/slide-2.webp" />
-		</div>
-		<div class="swiper-slide">
-			<img class="image-3" src="assets/img/slide-3.webp" />
-		</div>
-		<!-- Дополнительные слайды можно добавить здесь -->
-	  </div>
-	  <!-- If we need pagination -->
-	  <div class="swiper-pagination"></div>
+	<!--<div class="swiper">-->
+	<!--  &lt;!&ndash; Additional required wrapper &ndash;&gt;-->
+	<!--  <div class="swiper-wrapper">-->
+	<!--	&lt;!&ndash; Slides &ndash;&gt;-->
+	<!--	<div class="swiper-slide">-->
+	<!--	  slide 1-->
+	<!--	  <img class="image-1" src="assets/img/slide-1.webp" />-->
+	<!--	</div>-->
+	<!--	<div class="swiper-slide">-->
+	<!--		<img class="image-2" src="assets/img/slide-2.webp" />-->
+	<!--	</div>-->
+	<!--	<div class="swiper-slide">-->
+	<!--		<img class="image-3" src="assets/img/slide-3.webp" />-->
+	<!--	</div>-->
+	<!--	&lt;!&ndash; Дополнительные слайды можно добавить здесь &ndash;&gt;-->
+	<!--  </div>-->
+	<!--  &lt;!&ndash; If we need pagination &ndash;&gt;-->
+	<!--  <div class="swiper-pagination"></div>-->
 	
-	  <!-- If we need navigation buttons -->
-	  <div class="swiper-button-prev"></div>
-	  <div class="swiper-button-next"></div>
+	<!--  &lt;!&ndash; If we need navigation buttons &ndash;&gt;-->
+	<!--  <div class="swiper-button-prev"></div>-->
+	<!--  <div class="swiper-button-next"></div>-->
 	
-	  <!-- If we need scrollbar -->
-	  <div class="swiper-scrollbar"></div>
-	</div>
+	<!--  &lt;!&ndash; If we need scrollbar &ndash;&gt;-->
+	<!--  <div class="swiper-scrollbar"></div>-->
+	<!--</div>-->
+	
+	<SwiperSlider 
+		slideSources={slideSources}
+		client:only="react"
+	/>
   </section>
   

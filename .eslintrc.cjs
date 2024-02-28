@@ -1,5 +1,6 @@
 module.exports = {
     "parserOptions": {
+        "sourceType": "module",
         "ecmaVersion": "latest"
     },
     "env": {
@@ -7,6 +8,7 @@ module.exports = {
     },
     extends: [
         "plugin:astro/recommended",
+        "plugin:react/recommended"
     ],
     overrides: [
         {
@@ -20,4 +22,12 @@ module.exports = {
             },
         },
     ],
+    rules: {
+        "indent": [
+            "error", 
+            4
+        ],
+        "react/prop-types": 0,
+        "react/react-in-jsx-scope": 0
+    }
 }
