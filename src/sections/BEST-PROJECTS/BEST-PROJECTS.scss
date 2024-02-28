@@ -1,18 +1,24 @@
-.swiper {
-	width: 600px;
-	height: 300px;
-  }
+.swiper-slide {
 
-// .swiper-slide {
-// 	background-size: contain;
-//     background-repeat: no-repeat;
-// 	min-height: 600px;
-// }
+	img {
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-repeat: no-repeat;
+		height: 600px;
+		width: 100%;
+		background-position: center;
+	}
+	}
 
-// .swiper-slide-1 {
-// 	background-image: url("assets/img/slide-1.webp");
-// }
 
-// .swiper-slide-2 {
-// 	background-image: url("assets/img/slide-1.webp");
+
+.swiper-slide-1 {
+	background-image: url("assets/img/slide-1.webp");
+}
+
+// .image-1 {
+// 	background-repeat: no-repeat;
+// 	height: 600px;
+// 	width: 100%;
+// 	background-position: center;
 // }
