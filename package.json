@@ -4,7 +4,6 @@
     "version": "0.5.1",
     "author": "Gleb Moroz",
     "license": "UNLICENSED",
-    
     "type": "module",
     "scripts": {
         "dev": "astro dev",
@@ -12,7 +11,8 @@
         "preview": "astro preview"
     },
     "dependencies": {
-        "astro": "^4.3.2"
+        "astro": "^4.3.2",
+        "swiper": "^11.0.7"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.17",
