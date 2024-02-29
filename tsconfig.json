@@ -1,32 +1,32 @@
 {
-  "extends": "astro/tsconfigs/base",
-  "compilerOptions": {
-    "baseUrl": "/Users/sinner93/Development/Rieltor/src",
-    "paths": {
-      "@styles/*": [
-        "styles/*"
-      ],
-      "@pages/*": [
-        "pages/*"
-      ],
-      "@components/*": [
-        "components/*"
-      ],
-      "@sections/*": [
-        "sections/*"
-      ],
-      "@layouts/*": [
-        "./layouts/*"
-      ]
+    "extends": "astro/tsconfigs/base",
+    "compilerOptions": {
+      "baseUrl": "./src",
+      "paths": {
+        "@styles/*": [
+          "styles/*"
+        ],
+        "@pages/*": [
+          "pages/*"
+        ],
+        "@components/*": [
+          "components/*"
+        ],
+        "@sections/*": [
+          "sections/*"
+        ],
+        "@layouts/*": [
+          "./layouts/*"
+        ]
+      },
+      "jsx": "react-jsx",
+      "jsxImportSource": "react"
     },
-    "jsx": "react-jsx",
-    "jsxImportSource": "react"
-  },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
-}
+    "include": [
+      "src"
+    ],
+    "exclude": [
+      "node_modules",
+      "dist"
+    ]
+  }
