@@ -3,23 +3,21 @@
 .header {
 	padding: 20px 0;
 
-	@media (width <= $breakpoint-xxl) {
+	@media (width <=$breakpoint-xxl) {
 		padding-top: 30px;
 	}
 
-	@media (width <= $breakpoint-xl) {
+	@media (width <=$breakpoint-xl) {
 		padding-top: 30px;
 	}
 
-	@media (width <= $breakpoint-md) {
+	@media (width <=$breakpoint-md) {
 		padding-top: 15px;
 	}
 
-	@media (width <= $breakpoint-sm) {
+	@media (width <=$breakpoint-sm) {
 		padding: 10px 0;
 	}
-
-	
 }
 
 
@@ -45,32 +43,37 @@
 	width: 108px;
 	height: 91px;
 
-	@media (width <= $breakpoint-xxl) {
+	&:hover {
+		scale: 1.2;
+		transition: ease-in-out 0.3s;
+	}
+
+	@media (width <=$breakpoint-xxl) {
 		width: 56px;
 		height: 47px;
 		margin-right: 15px;
 	}
 
-	@media (width <= $breakpoint-xl) {
+	@media (width <=$breakpoint-xl) {
 		width: 56px;
 		height: 47px;
 		margin-right: 15px;
 	}
 
-	@media (width <= $breakpoint-md) {
+	@media (width <=$breakpoint-md) {
 		width: 56px;
 		height: 47px;
 		margin-right: 10px;
 	}
 
-	@media (width <= $breakpoint-sm) {
-	    height: 30px;
-    	margin-right: 10px;
-    	width: 32px;
+	@media (width <=$breakpoint-sm) {
+		height: 30px;
+		margin-right: 10px;
+		width: 32px;
 	}
 }
 
-.logo > img {
+.logo>img {
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
@@ -81,21 +84,21 @@
 	font-size: 1.667rem;
 	color: $text-color-secondary;
 	font-family: $font-secondary;
-	
-	@media (width <= $breakpoint-xxl) {
+
+	@media (width <=$breakpoint-xxl) {
 		font-size: 1.111rem;
 	}
 
-	@media (width <= $breakpoint-xl) {
+	@media (width <=$breakpoint-xl) {
 		font-size: 1.111rem;
 
 	}
 
-	@media (width <= $breakpoint-md) {
+	@media (width <=$breakpoint-md) {
 		font-size: .850rem;
 	}
 
-	@media (width <= $breakpoint-sm) {
+	@media (width <=$breakpoint-sm) {
 		font-size: 0.667rem;
 	}
 }
@@ -105,48 +108,58 @@
 	color: $text-color-primary;
 	color: #ffffffd4;
 
-	@media (width <= $breakpoint-xxl) {
+	@media (width <=$breakpoint-xxl) {
 		font-size: 0.667rem;
 	}
 
-	@media (width <= $breakpoint-xl) {
+	@media (width <=$breakpoint-xl) {
 		font-size: 0.667rem;
 	}
 
-	@media (width <= $breakpoint-md) {
-	    font-size: .553rem;
+	@media (width <=$breakpoint-md) {
+		font-size: .553rem;
 	}
 
-	@media (width <= $breakpoint-sm) {
+	@media (width <=$breakpoint-sm) {
 		font-size: 0.389rem;
 	}
 }
 
 .icon {
-	width: 47px;
-	height: 47px;
 	background-color: $background-secondary;
 	border-radius: 1000px;
-	padding: 10px 10px;
+	height: 40px;
+	padding: 10px;
+	width: 40px;
 
-	@media (width <= $breakpoint-xxl) {
+	&:hover {
+		transform: rotate(45deg);
+		transition: 0.3s ease-in-out;
+	}
+
+	&:active {
+		background-color: #1f647a;
+		transition: 0.2s ease-in-out;
+	}
+
+	@media (width <=$breakpoint-xxl) {
 		width: 38px;
 		height: 38px;
 		padding: 5px;
 	}
 
-	@media (width <= $breakpoint-xl) {
+	@media (width <=$breakpoint-xl) {
 		width: 38px;
 		height: 38px;
 		padding: 5px;
 	}
 
-	@media (width <= $breakpoint-md) {
+	@media (width <=$breakpoint-md) {
 		width: 19px;
 		height: 19px;
 	}
 
-	@media (width <= $breakpoint-sm) {
+	@media (width <=$breakpoint-sm) {
 		width: 19px;
 		height: 19px;
 		padding: 4px;
@@ -154,7 +167,7 @@
 }
 
 
-.icon > img {
+.icon>img {
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
@@ -172,22 +185,22 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	padding: 0 1rem;
+	padding: 0px 4rem;
 
 
-	@media (width <= $breakpoint-xxl) {
+	@media (width <=$breakpoint-xxl) {
 		display: flex;
 	}
 
-	@media (width <= $breakpoint-xl) {
+	@media (width <=$breakpoint-xl) {
 		display: flex;
 	}
 
-	@media (width <= $breakpoint-md) {
+	@media (width <=$breakpoint-md) {
 		display: none;
 	}
 
-	@media (width <= $breakpoint-sm) {
+	@media (width <=$breakpoint-sm) {
 		display: none;
 	}
 }
@@ -196,20 +209,47 @@
 .nav_link {
 	font-size: 1rem;
 	padding: 0 0.3rem;
+	position: relative;
+	display: inline-block;
 
-	@media (width <= $breakpoint-xxl) {
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: -5px;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background-color: #22B4E1;
+		transition: width 0.3s ease-in-out;
+		
+	}
+
+	&:hover {
+		color: #ffffffb9;
+	}
+
+	&:hover::after {
+		width: 100%;
+	}
+
+	&:active {
+		color: #22B4E1;
+		transition: width 0.6s ease-in-out;
+	}
+
+	@media (width <=$breakpoint-xxl) {
 		font-size: 14px;
 	}
 
-	@media (width <= $breakpoint-xl) {
+	@media (width <=$breakpoint-xl) {
 		font-size: 14px;
 	}
 
-	@media (width <= $breakpoint-md) {
+	@media (width <=$breakpoint-md) {
 		font-size: 20px;
 	}
 
-	@media (width <= $breakpoint-sm) {
+	@media (width <=$breakpoint-sm) {
 		font-size: 8px;
 	}
 }
@@ -217,11 +257,11 @@
 .nav_link:last-child {
 	margin-bottom: 0;
 
-	@media (width <= $breakpoint-md) {
+	@media (width <=$breakpoint-md) {
 		margin-bottom: 0;
 	}
 
-	@media (width <= $breakpoint-sm) {
+	@media (width <=$breakpoint-sm) {
 
 		margin-bottom: 0;
 	}
@@ -234,25 +274,38 @@
 	margin-right: 30px;
 	font-family: $font-secondary;
 
-	@media (width <= $breakpoint-xxl) {
+	&:hover {
+		color: $text-color-secondary;
+		transition: ease-in-out 0.3s;
+	}
+
+	&:active {
+		color: #1f647a;
+		transition: ease-in-out 0.2s;
+	}
+
+
+
+
+	@media (width <=$breakpoint-xxl) {
 		font-size: 16px;
 	}
 
-	@media (width <= $breakpoint-xl) {
+	@media (width <=$breakpoint-xl) {
 		font-size: 16px;
 	}
 
-	@media (width <= $breakpoint-md) {
+	@media (width <=$breakpoint-md) {
 		font-size: 18px;
 		margin-right: 10px;
 	}
 
-	@media (width <= $breakpoint-ls) {
+	@media (width <=$breakpoint-ls) {
 		font-size: 12px;
 		margin-right: 12px;
 	}
 
-	@media (width <= $breakpoint-sm) {
+	@media (width <=$breakpoint-sm) {
 		font-size: 12px;
 		margin-right: 12px;
 	}
@@ -261,92 +314,102 @@
 
 .phone-wrapper {
 	display: flex;
-}
-
-.burger-menu {
+  }
+  
+  .burger-menu {
+	position: relative;
 	display: none;
 	flex-direction: column;
 	align-items: center;
 	cursor: pointer;
 	order: 3;
 	margin-right: 15px;
-	cursor: pointer;
-
-	
-	@media (width <= $breakpoint-md) {
-		display: flex;
-		margin-right: 20px;
+  
+	@media (max-width: $breakpoint-md) {
+	  display: flex;
+	  margin-right: 20px;
 	}
-
-	@media (width <= $breakpoint-ls) {
-		    margin-right: 5px;
+  
+	@media (max-width: $breakpoint-ls) {
+	  margin-right: 5px;
 	}
-
-	@media (min-width: 375px) {
-		margin-right: 0;
+  
+	@media (max-width: 375px) {
+	  margin-right: 0;
 	}
-
-	@media (width <= $breakpoint-sm) {
-		margin-right: -5px;
-		padding: 2px;
+  
+	@media (max-width: $breakpoint-sm) {
+	  margin-right: -5px;
+	  padding: 2px;
 	}
-
-
-
-	// TODO: отрефакторить
+  
+	.burger-close {
+	  display: none; // Скрыт по умолчанию
+	  position: absolute;
+	  right: -2px;
+	  top: -7px;
+	  cursor: pointer;
+	  font-size: 24px;
+	  z-index: 200;
+	  color: #fff; // Пример цвета, адаптируйте под ваш дизайн
+  
+	  &:hover {
+		color: darken(#fff, 10%); // Немного темнее при наведении
+	  }
+	}
+  
 	& div {
-		width: 25px;
-		height: 2px;
-		background-color: $background-accent;
-		margin: 4px 0;
-
-		@media (width <= $breakpoint-md) {
-			width: 25px;
-			height: 2px;
-			background-color: $background-accent;
-			margin: 4px 0;
-		}
-
-		@media (width <= $breakpoint-sm) {
-			width: 25px;
-			height: 2px;
-			background-color: $background-accent;
-			margin: 4px 0;
-		}
+	  width: 30px;
+	  margin-right: 10px;
+	  height: 3px;
+	  background-color: $background-accent;
+	  margin: 4px 0;
 	}
-}
-
-.dropdown-menu {
-	display: none;
+  }
+  
+  .dropdown-menu {
+	visibility: hidden; // Изменено с display: none на visibility
+	opacity: 0;
 	position: absolute;
-	top: 0;
+	top: 58px; // Изменено для лучшего позиционирования
 	right: 0;
 	background-color: $background-extra;
-	padding: 15px;
+	top: -13px;
 	z-index: 3;
-	top: -14px;
-
-	@media (width <= $breakpoint-md) {
-		right: 0px;
+	transition: opacity 0.5s, visibility 0.5s linear; // Добавляем плавный переход
+  
+	@media (max-width: $breakpoint-md) {
+	  right: 0px;
 	}
-
-	@media (width <= $breakpoint-sm) {
-		padding: 7px;
-		right: -7px;
+  
+	@media (max-width: $breakpoint-sm) {
+	  padding: 7px;
+	  right: -7px;
 	}
-	
-	
+  
 	& a {
-		color: #fff;
-		display: block;
-		height: 50px;
-		margin-bottom: 8px;
-		text-decoration: none;
-
-
-		@media (width <= $breakpoint-sm) {
-				height: 15px;
-				margin-bottom: 7px;
-		}
+	  color: #fff;
+	  display: block;
+	  height: 25px;
+	  margin-bottom: 8px;
+	  padding: 14px 16px;
+	  text-decoration: none;
+  
+	  @media (max-width: $breakpoint-sm) {
+		height: 15px;
+		margin-bottom: 7px;
+	  }
 	}
-}
+  }
+  
+  // Добавляем класс активности для отображения .dropdown-menu
+  .burger-menu.active + .dropdown-menu {
+	visibility: visible;
+	opacity: 1;
+  }
+  
+  // Показываем .burger-close когда меню активно
+  .burger-menu.active .burger-close {
+	display: block;
+  }
+  

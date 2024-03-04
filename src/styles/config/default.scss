@@ -24,8 +24,7 @@ html {
 	.container {
 		max-width: $containers-md;
 		padding: 0 1rem;
-		
-	}
+		}  
 }
 
 @media (width > $breakpoint-xl) {
@@ -43,6 +42,8 @@ html {
 }
 
 
+
+
 // Font Family
 
 h1,h2 {
@@ -50,9 +51,14 @@ h1,h2 {
 	font-weight: 700;
 }
 
-// h2 {
-// 	@media (max-width: $breakpoint-ls) {
-// 		font-size: 30px;
-// }
-// }
+.font-weight-400 {
+	font-weight: 400;
+}
+
+
+// Flex
+
+.flex {
+	display: flex;
+}
 

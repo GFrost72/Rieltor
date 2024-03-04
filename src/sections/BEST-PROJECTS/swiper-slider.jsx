@@ -23,6 +23,7 @@ const SwiperSlider = ({ slideSources }) => {
           className="swiper-custom-slide"
           key={slideSource.src}
         >
+
           <p className="slider-text">{slideSource.text}</p>
           {/* Apply the dimming effect directly to the image */}
           <div className="image-container">

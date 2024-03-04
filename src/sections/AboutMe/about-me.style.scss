@@ -317,7 +317,7 @@
 	flex-wrap: wrap;
 
 	@media (max-width: $breakpoint-xl) {
-		height: 325px;
+		height: 337px;
 	}
 
 	@media (max-width: $breakpoint-md) {
@@ -325,7 +325,7 @@
 	}
 
 	@media (max-width: $breakpoint-ls) {
-		height: 280px;
+		height: 245px;
 	}
 
    
@@ -378,7 +378,7 @@
 	}
 
 	@media (max-width: $breakpoint-ls) {
-		gap: 35px;
+	    gap: 22px;
 	}
 
 	@media (max-width: $breakpoint-sm) {
@@ -405,6 +405,10 @@
 	align-items: flex-start;
 	gap: 8px;
 	align-self: stretch;
+
+	@media (max-width: $breakpoint-ls) {
+		gap: 4px;
+		}
 }
 
 .top-titles-first {
@@ -425,7 +429,7 @@
 	}
 
 	@media (max-width: $breakpoint-ls) {
-		font-size: 20px;
+		font-size: 16px;
 	}
 
 	@media (max-width: $breakpoint-sm) {
@@ -482,7 +486,7 @@
 	}
 
 	@media (max-width: $breakpoint-ls) {
-		font-size: 30px;
+		font-size: 26px;
 	}
 
 	@media (max-width: $breakpoint-sm) {
