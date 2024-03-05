@@ -77,11 +77,15 @@
 	}
 
 	@media (width <=$breakpoint-md) {
-	    width: 150px;
+	    width: 140px;
 	}
 
-	@media (width <=330px) {
-		width: 180px;
+	@media (width <=390px) {
+		width: 145px;
+	}
+
+	@media (width <=370px) {
+		width: 130px;
 	}
 }
 
@@ -356,9 +360,9 @@
 	}
 
 	@media (max-width: $breakpoint-ls) {
-		min-width: 268px;
-		font-size: 18px;
+		font-size: 16px;
 		line-height: 24px;
+		min-width: 220px;
 	}
 
 
