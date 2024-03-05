@@ -5,37 +5,36 @@ import 'swiper/css/bundle';
 
 
 const SwiperSlider = ({ slideSources }) => {
-  return (
-    <Swiper
-      loop
-      className="custom-slider"
-      navigation
-      modules={[Navigation, Pagination]}
-      spaceBetween={50}
-      slidesPerView={1}
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
-    >
-      {slideSources.map((slideSource) => (
-        <SwiperSlide
-          className="swiper-custom-slide"
-          key={slideSource.src}
+    return (
+        <Swiper
+            loop
+            className="custom-slider"
+            navigation
+            modules={[Navigation, Pagination]}
+            spaceBetween={50}
+            slidesPerView={1}
+            pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
+            onSlideChange={() => console.log('slide change')}
+            onSwiper={(swiper) => console.log(swiper)}
         >
-
-          <p className="slider-text">{slideSource.text}</p>
+            {slideSources.map((slideSource) => (
+                <SwiperSlide
+                    className="swiper-custom-slide"
+                    key={slideSource.src}
+                >
+                    <p className="slider-text">{slideSource.text}</p>
 			
-		  {/*	TODO: для чего обертка? Можно убрать */}
-          {/* Apply the dimming effect directly to the image */}
-          {/*<div className="image-container">*/}
-            <img src={slideSource.src} alt={slideSource.alt} className="dimmed-image"/>
-          {/*</div>*/}
+		  			{/*	TODO: для чего обертка? Можно убрать */}
+                    {/* Apply the dimming effect directly to the image */}
+                    {/*<div className="image-container">*/}
+                    <img src={slideSource.src} alt={slideSource.alt} className="dimmed-image"/>
+                    {/*</div>*/}
 			
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  );
+                </SwiperSlide>
+            ))}
+        </Swiper>
+    );
 };
 
 
