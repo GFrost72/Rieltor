@@ -357,12 +357,16 @@
 		color: darken(#fff, 10%); // Немного темнее при наведении
 	  }
 	}
-  
+	  
 	& div {
 	  width: 30px;
 	  margin-right: 10px;
+
+	  //  TODO: это для чего?  =)
 	  height: 3px;
 	  background-color: $background-accent;
+
+	  // TODO: марджин выше перезаписываешь
 	  margin: 4px 0;
 	}
   }
