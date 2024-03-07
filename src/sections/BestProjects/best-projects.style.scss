@@ -109,7 +109,9 @@
 	}
 
 	@media (max-width: $breakpoint-ls) {
-		font-size: 14px;
+		font-size: 18px;
+		top: 53%;
+		min-width: 270px;
 	}
 
 	@media (max-width: $breakpoint-sm) {
@@ -148,7 +150,16 @@
 		/* высота кнопки */
 		top: var(--swiper-navigation-top-offset, 45%);
 		
-
+		&:hover {
+			background: #2686a6;
+			transition: ease-in-out 0.3s;
+		}
+	
+		&:active {
+			background: #36c3ee;
+			transition: ease-in-out 0.3s;
+		}
+		
 		@media (max-width: $breakpoint-xl) {
 			width: 60px;
 			height: 60px;

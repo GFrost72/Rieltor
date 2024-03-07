@@ -250,6 +250,16 @@
     top: 95%;
     width: 4rem;
 
+	&:hover {
+		scale: 1.5;
+		transition: ease-in-out 0.2s;
+	}
+
+	&:active {
+		transform: rotate(-45deg);
+		transition: ease-in-out 0.2s;
+	}
+
 	a {
 		display: block;
 		width: 100%;
@@ -288,6 +298,16 @@
 	font-size: 24px;
 	font-family: $font-secondary;
 	font-weight: 400;
+
+	&:hover {
+		background: #2686a6;
+		transition: ease-in-out 0.3s;
+	}
+
+	&:active {
+		background: #36c3ee;
+		transition: ease-in-out 0.3s;
+	}
 
 	@media (width <= $breakpoint-ls) {
 		font-size: 16px;
