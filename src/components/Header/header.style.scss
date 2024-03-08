@@ -312,11 +312,116 @@
 }
 
 
+// .phone-wrapper {
+// 	display: flex;
+//   }
+  
+//   .burger-menu {
+// 	position: relative;
+// 	display: none;
+// 	flex-direction: column;
+// 	align-items: center;
+// 	cursor: pointer;
+// 	order: 3;
+// 	margin-right: 15px;
+  
+// 	@media (max-width: $breakpoint-md) {
+// 	  display: flex;
+// 	  margin-right: 20px;
+// 	}
+  
+// 	@media (max-width: $breakpoint-ls) {
+// 	  margin-right: 5px;
+// 	}
+  
+// 	@media (max-width: 375px) {
+// 	  margin-right: 0;
+// 	}
+  
+// 	@media (max-width: $breakpoint-sm) {
+// 	  margin-right: -5px;
+// 	  padding: 2px;
+// 	}
+  
+// 	.burger-close {
+// 	  display: none; // Скрыт по умолчанию
+// 	  position: absolute;
+// 	  right: -17px;
+// 	  top: -14px;
+// 	  cursor: pointer;
+// 	  font-size: 30px;
+// 	  z-index: 200;
+// 	  color: #fff; // Пример цвета, адаптируйте под ваш дизайн
+  
+// 	  &:hover {
+// 		color: darken(#fff, 10%); // Немного темнее при наведении
+// 	  }
+// 	}
+	  
+// 	& div {
+// 	  width: 30px;
+// 	  margin-right: 10px;
+
+// 	  //  TODO: это для чего?  =)
+// 	  height: 3px;
+// 	  background-color: $background-accent;
+
+// 	  // TODO: марджин выше перезаписываешь
+// 	  margin: 4px 0;
+// 	}
+//   }
+  
+//   .dropdown-menu {
+// 	visibility: hidden; // Изменено с display: none на visibility
+// 	opacity: 0;
+// 	position: absolute;
+// 	top: 58px; // Изменено для лучшего позиционирования
+// 	right: 0;
+// 	background-color: $background-extra;
+// 	top: -13px;
+// 	z-index: 3;
+// 	transition: opacity 0.5s, visibility 0.5s linear; // Добавляем плавный переход
+  
+// 	@media (max-width: $breakpoint-md) {
+// 	  right: 0px;
+// 	}
+  
+// 	@media (max-width: $breakpoint-sm) {
+// 	  padding: 7px;
+// 	  right: -7px;
+// 	}
+  
+// 	& a {
+// 	  color: #fff;
+// 	  display: block;
+// 	  height: 25px;
+// 	  margin-bottom: 8px;
+// 	  padding: 14px 16px;
+// 	  text-decoration: none;
+  
+// 	  @media (max-width: $breakpoint-sm) {
+// 		height: 15px;
+// 		margin-bottom: 7px;
+// 	  }
+// 	}
+//   }
+  
+//   // Добавляем класс активности для отображения .dropdown-menu
+//   .burger-menu.active + .dropdown-menu {
+// 	visibility: visible;
+// 	opacity: 1;
+//   }
+  
+//   // Показываем .burger-close когда меню активно
+//   .burger-menu.active .burger-close {
+// 	display: block;
+//   }
+  
 .phone-wrapper {
 	display: flex;
-  }
-  
-  .burger-menu {
+}
+
+.burger-menu {
 	position: relative;
 	display: none;
 	flex-direction: column;
@@ -324,96 +429,90 @@
 	cursor: pointer;
 	order: 3;
 	margin-right: 15px;
-  
+
 	@media (max-width: $breakpoint-md) {
-	  display: flex;
-	  margin-right: 20px;
+		display: flex;
+		margin-right: 20px;
 	}
-  
+
 	@media (max-width: $breakpoint-ls) {
-	  margin-right: 5px;
+		margin-right: 0px;
 	}
-  
+
 	@media (max-width: 375px) {
-	  margin-right: 0;
+		margin-right: 0;
 	}
-  
+
 	@media (max-width: $breakpoint-sm) {
-	  margin-right: -5px;
-	  padding: 2px;
+		margin-right: -5px;
+		padding: 2px;
 	}
-  
+
 	.burger-close {
-	  display: none; // Скрыт по умолчанию
-	  position: absolute;
-	  right: -2px;
-	  top: -7px;
-	  cursor: pointer;
-	  font-size: 24px;
-	  z-index: 200;
-	  color: #fff; // Пример цвета, адаптируйте под ваш дизайн
-  
-	  &:hover {
-		color: darken(#fff, 10%); // Немного темнее при наведении
-	  }
-	}
-	  
-	& div {
-	  width: 30px;
-	  margin-right: 10px;
+		display: none; // Скрыт по умолчанию
+		position: absolute;
+		right: -11px;
+		top: -17px;
+		cursor: pointer;
+		font-size: 30px;
+		z-index: 200;
+		color: #fff; // Пример цвета, адаптируйте под ваш дизайн
 
-	  //  TODO: это для чего?  =)
-	  height: 3px;
-	  background-color: $background-accent;
-
-	  // TODO: марджин выше перезаписываешь
-	  margin: 4px 0;
+		&:hover {
+			color: darken(#fff, 10%); // Немного темнее при наведении
+		}
 	}
-  }
-  
-  .dropdown-menu {
+}
+
+// Уточняем селектор для линий меню (если используются), исключая .burger-close
+.burger-menu > div:not(.burger-close) {
+	width: 30px;
+	height: 3px;
+	background-color: $background-accent;
+	margin: 4px 0; // Уточняем марджин для элементов меню
+}
+
+.dropdown-menu {
 	visibility: hidden; // Изменено с display: none на visibility
 	opacity: 0;
 	position: absolute;
-	top: 58px; // Изменено для лучшего позиционирования
+	top: -15px; // Изменено для лучшего позиционирования
 	right: 0;
 	background-color: $background-extra;
-	top: -13px;
 	z-index: 3;
 	transition: opacity 0.5s, visibility 0.5s linear; // Добавляем плавный переход
-  
+
 	@media (max-width: $breakpoint-md) {
-	  right: 0px;
+		right: 0px;
 	}
-  
+
 	@media (max-width: $breakpoint-sm) {
-	  padding: 7px;
-	  right: -7px;
+		padding: 7px;
+		right: -7px;
 	}
-  
+
 	& a {
-	  color: #fff;
-	  display: block;
-	  height: 25px;
-	  margin-bottom: 8px;
-	  padding: 14px 16px;
-	  text-decoration: none;
-  
-	  @media (max-width: $breakpoint-sm) {
-		height: 15px;
-		margin-bottom: 7px;
-	  }
+		color: #fff;
+		display: block;
+		height: 25px;
+		margin-bottom: 8px;
+		padding: 14px 16px;
+		text-decoration: none;
+
+		@media (max-width: $breakpoint-sm) {
+			height: 15px;
+			margin-bottom: 7px;
+		}
 	}
-  }
-  
-  // Добавляем класс активности для отображения .dropdown-menu
-  .burger-menu.active + .dropdown-menu {
+}
+
+// Добавляем класс активности для отображения .dropdown-menu
+.burger-menu.active + .dropdown-menu {
 	visibility: visible;
 	opacity: 1;
-  }
-  
-  // Показываем .burger-close когда меню активно
-  .burger-menu.active .burger-close {
+}
+
+// Показываем .burger-close когда меню активно
+.burger-menu.active .burger-close {
 	display: block;
-  }
-  
+}

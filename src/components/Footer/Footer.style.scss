@@ -47,8 +47,8 @@
 	}
 
 	@media (max-width: $breakpoint-ls) {
-		height: 6rem;
-		margin-bottom: 25px;
+		height: 7rem;
+		margin-bottom: 26px;
 	}
 }
 
@@ -130,6 +130,8 @@
 .block-text__title {
 	font-weight: 400;
 	font-size: 18px;
+	font-family: 'Play';
+	//  (((((!!!)))))
 
 	@media (max-width: $breakpoint-xl) {
 		font-size: 16px;
@@ -141,6 +143,7 @@
 	font-family: $font-secondary-name;
 	font-weight: 400;
 	font-size: 20px;
+	display: contents;
 
 	@media (max-width: $breakpoint-xl) {
 		font-size: 18px;
