@@ -3,9 +3,9 @@ import './hero.style.scss'
 
 ---
 
-<script src="./modal.js">
-	
-</script>
+<script src="./modal.js"></script>
+<script src="./validator.js"></script>
+<script src="./formAJAX.js"></script>
 
 <section class="hero">
 	<div class="container">
@@ -20,15 +20,18 @@ import './hero.style.scss'
 						<!-- Modal content -->
 						<div class="modal-content">
 						  <span class="close">&times;</span>
-						  <form id="submitForm">
-							<label for="name">Имя</label>
-							<input type="text" id="name" name="name" required>
+						  <form id="submitForm" action="sendmail.php" method="post">
+							<label class="label-form" for="name">Имя</label>
+							<input type="text" id="name" name="name" placeholder="Ваше имя">
+							<div class="error-message" id="name-error"></div>
 							
-							<label for="phone">Телефон</label>
-							<input type="tel" id="phone" name="phone" required>
+							<label class="label-form" for="phone">Телефон</label>
+							<input type="text" id="phone" name="phone" placeholder="Ваш телефон">
+							<div class="error-message" id="phone-error"></div>
 							
-							<input type="submit" value="ОСТАВИТЬ ЗАЯВКУ">
-						  </form>
+							<input type="submit" value="Оставить заявку">
+							<p class="form-text">Оставляя данные формы вы соглашаетесь с политикой конфиденциальности</p>
+						</form>
 						</div>
 					  </div>
 

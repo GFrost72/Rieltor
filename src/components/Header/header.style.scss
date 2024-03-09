@@ -30,7 +30,8 @@
 
 .header__button {
 	align-items: center;
-	display: flex;
+display: flex;
+
 }
 
 .logo-wrapper {
@@ -157,6 +158,11 @@
 	@media (width <=$breakpoint-md) {
 		width: 19px;
 		height: 19px;
+	}
+
+	
+	@media (max-width: 376px) {
+		display: none;
 	}
 
 	@media (width <=$breakpoint-sm) {
