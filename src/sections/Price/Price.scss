@@ -1,24 +1,44 @@
 @import "styles/config/variables";
 
 .price {
-	padding: 2rem 0 4rem 0;
+	padding: 2rem 0 3rem;
+
+	@media (width <=$breakpoint-xl) {
+		padding: 2rem 0 2rem;
+	}
+
+	@media (width <=$breakpoint-md) {
+		padding: 0rem 0 1rem;
+		padding-bottom: 2rem;
+	}
 }
 
 .price__wrapper {
-background-color: #212121;
-padding: 40px 60px;
+	background-color: #212121;
+	padding: 40px 60px;
 
-@media (width <=$breakpoint-md) {
-	padding: 20px 30px;
-}
+	@media (width <=$breakpoint-md) {
+		padding: 20px 30px;
+	}
+
+	@media (width <=$breakpoint-ls) {
+		padding: 0;
+	}
+
 }
 
 .price__top {
 	margin-bottom: 3rem;
 
 	@media (width <=$breakpoint-md) {
-		margin-bottom: 1rem;
+		margin-bottom: 0;
 	}
+
+	@media (width <=$breakpoint-md) {
+		padding: 1rem;
+	}
+
+
 }
 
 .price__title {
@@ -32,92 +52,93 @@ padding: 40px 60px;
 
 	@media (width <=$breakpoint-md) {
 		font-size: 30px;
-		margin-bottom: 18px;
+		margin-bottom: 6px;
 	}
 
 	@media (width <=$breakpoint-ls) {
-		font-size: 26px;
+		font-size: 30px;
 		line-height: 36px;
-		margin-bottom: 16px;
+		margin-bottom: 6px;
 	}
 }
 
 .price__second-title {
 	font-size: 40px;
-	
+
 	@media (width <=$breakpoint-xl) {
 		font-size: 32px;
 	}
 
 	@media (width <=$breakpoint-md) {
-		font-size: 30px;
-		margin-bottom: 18px;
+		font-size: 28px;
 	}
 
 	@media (width <=$breakpoint-ls) {
 		font-size: 26px;
 		line-height: 36px;
-		margin-bottom: 16px;
+		margin-bottom: 10px;
 	}
 
 }
 
 .price__bot-article {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 	align-items: flex-start;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.05);
-    gap: 10px;
+	padding: 20px;
+	background: rgba(255, 255, 255, 0.05);
+	gap: 10px;
 	width: 40%;
-    margin: 20px;
-    position: relative;
+	margin: 20px;
+	position: relative;
 	padding: 28px 30px;
 
 
 	@media (width <=$breakpoint-xl) {
 		max-width: 320px;
-		min-height: 460px;
 		padding: 18px 27px;
 	}
 
 	@media (width <=$breakpoint-md) {
-		padding: 23px 18px;
-		max-width: 245px;
+		padding: 12px 18px;
+		max-width: none;
+		margin: 10px;
 	}
 
 	@media (width <=$breakpoint-ls) {
-		min-width: 260px;
-		padding: 10px 15px 15px 10px;
+		padding: 10px 15px 15px 18px;
 		margin-bottom: 26px;
+		width: 100%;
+		
 	}
 }
 
 .price__bot {
 	display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; /* Обеспечивает равномерное распределение места между элементами */
-    
+	flex-wrap: wrap;
+	justify-content: space-around;
+	/* Обеспечивает равномерное распределение места между элементами */
 
-    @media (width <=$breakpoint-xl) {
-        margin-bottom: 40px;
-    }
 
-    @media (width <=$breakpoint-ls) {
-        justify-content: center; // Центрируем карточки, когда они идут в один столбец
-    }
+	@media (width <=$breakpoint-xl) {
+		margin-bottom: 0px;
+	}
+
+	@media (width <=$breakpoint-ls) {
+		justify-content: center; // Центрируем карточки, когда они идут в один столбец
+	}
 }
 
 
 .price__bot-article-title {
-    color: #fff;
-    font-family: Russo One,Arial,san-serif,serif;
-    font-size: 40px;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: 45px;
-    margin-bottom: 20px;
+	color: #fff;
+	font-family: Russo One, Arial, san-serif, serif;
+	font-size: 40px;
+	font-weight: 400;
+	letter-spacing: 0;
+	line-height: 45px;
+	margin-bottom: 10px;
 	text-align: left;
 
 	@media (width <=$breakpoint-xl) {
@@ -126,14 +147,14 @@ padding: 40px 60px;
 	}
 
 	@media (width <=$breakpoint-md) {
-		font-size: 25px;
+		font-size: 26px;
 		line-height: 1.3;
 		margin-bottom: 10px;
 	}
 
 	@media (width <=$breakpoint-ls) {
 		margin-bottom: 6px;
-		font-size: 18px;
+		font-size: 22px;
 		line-height: 26px;
 	}
 }
@@ -145,15 +166,20 @@ padding: 40px 60px;
 	align-items: center;
 	font-family: $font-secondary;
 	font-weight: 400;
-	line-height: 1.6;
+	line-height: 1.5;
 
 	@media (width <=$breakpoint-xl) {
 		font-size: 16px;
 		margin-bottom: 14px;
 	}
 
-	@media (width <=$breakpoint-ls) {
+	@media (width <=$breakpoint-md) {
 		font-size: 14px;
+		margin-bottom: 10px;
+	}
+
+	@media (width <=$breakpoint-ls) {
+		font-size: 16px;
 		margin-bottom: 10px;
 		min-width: 247px;
 	}
@@ -177,13 +203,14 @@ padding: 40px 60px;
 
 
 .price__bot-article-desc {
-    font-size: 34px;
-    font-weight: 700;
-    max-width: 350px;
-    text-align: center;
-    max-width: 240px;
-    margin-top: auto; /* Перемещаем описание вниз карточки */
-    align-self: flex-end; 
+	font-size: 34px;
+	font-weight: 700;
+	max-width: 350px;
+	text-align: center;
+	max-width: 240px;
+	margin-top: auto;
+	/* Перемещаем описание вниз карточки */
+	align-self: flex-end;
 
 
 	@media (width <=$breakpoint-xl) {
@@ -191,12 +218,13 @@ padding: 40px 60px;
 	}
 
 	@media (width <=$breakpoint-md) {
-		font-size: 16px;
+		font-size: 18px;
 		max-width: 170px;
 	}
 
 	@media (width <=$breakpoint-ls) {
-		font-size: 16px;
+		font-size: 20px;
+		align-self: center;
 	}
 }
 
@@ -221,5 +249,13 @@ padding: 40px 60px;
 }
 
 .height {
-	max-height: 370px;
+
+
+	@media (width <=$breakpoint-xl) {
+		max-height: 370px;
+	}
+
+	@media (width <=$breakpoint-md) {
+		max-height: 330px;
+	}
 }

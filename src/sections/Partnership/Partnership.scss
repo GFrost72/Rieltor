@@ -1,0 +1,82 @@
+@import "styles/config/variables";
+
+.partnership-conditions {
+	padding-bottom: 4rem;
+
+	@media (width <=$breakpoint-ls) {
+		padding-bottom: 2rem;
+	}
+
+}
+
+.partnership__titel {
+font-size: 60px;
+text-transform: uppercase;
+margin-bottom: 3rem;
+
+@media (width <=$breakpoint-xl) {
+	font-size: 32px;
+	margin-bottom: 2rem;
+	padding-left: 4rem;
+}
+
+@media (width <=$breakpoint-ls) {
+	font-size: 24px;
+	margin-bottom: 2rem;
+	padding-left: 1rem;
+}
+}
+
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+
+	@media (width <=$breakpoint-ls) {
+		gap: 10px;
+	}
+  
+	.card {
+		display: flex;
+		flex: 1 0 calc(50% - 65px);
+		flex-direction: column;
+		gap: 16px;
+		padding: 26px;
+
+		@media (width <=$breakpoint-xl) {
+			padding: 20px;
+		}
+
+	}
+
+	p {
+		margin: 0;
+	}
+}
+
+.card__title {
+	font-size: 28px;
+	@media (width <=$breakpoint-ls) {
+		font-size: 26px;
+	}
+
+}
+
+.cards__card--no-penalties, .cards__card--discounts {
+	background-color: #212121;
+}
+
+.cards__card--guarantees, .cards__card--remote-work {
+	background-color: #8181813b;	
+}
+
+.card__text {
+	font-size: 20px;
+	@media (width <=$breakpoint-xl) {
+		font-size: 16px;
+	}
+}
+
+.cards__card--guarantees {
+
+}
