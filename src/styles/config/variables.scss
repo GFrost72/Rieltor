@@ -21,7 +21,6 @@ $secondary-100: #dadada;
 $secondary-300: #a2a1a1;
 $secondary-500: #5e5e5e;
 
-
 /* Text */
 $text-color-primary: $main-accent;
 $text-color-secondary: $main-primary;
@@ -59,24 +58,31 @@ $background-fluent: $secondary-300;
 /* Corners */
 /// Test
 $corners-rounded-xs: 0.375rem;
+$corners-rounded-ls: 0.375rem;
 $corners-rounded-md: 0.5rem;
 $corners-rounded-xl: 0.75rem;
 $corners-rounded-xxl: 1rem;
 
 
 /*** BREAKPOINTS ***/
-$breakpoint-sm: 320px;
+$breakpoint-sm: 330px;
+$breakpoint-ls: 440px;
 $breakpoint-md: 768px;
 $breakpoint-xl: 1024px;
 $breakpoint-xxl: 1440px;
 
 /*** CONTAINERS ***/
 $containers-sm: 300px;
-$containers-md: 640px;
+$containers-ls: 470px;
+$containers-md: 800px;
 $containers-xl: 960px;
 $containers-xxl: 1400px;
 
 /*** FONTS ***/
-$font-primary: "Play", "Arial", san-serif, serif;
-$font-secondary: "Russo One", "Arial", san-serif, serif;
+$font-primary-name: "Play";
+$font-secondary-name: "Russo One";
+
+$font-primary: $font-primary-name, "Arial", san-serif, serif;
+$font-secondary: $font-secondary-name, "Arial", san-serif, serif;
 $font-size-base: 16px;
+

@@ -1,20 +1,46 @@
 ---
 import './hero.style.scss'
+
 ---
+
+<script src="./modal.js"></script>
+<script src="./validator.js"></script>
+<script src="./formAJAX.js"></script>
 
 <section class="hero">
 	<div class="container">
 		<div class="hero-wrapper">
 			<div class="hero-text-block">
 				<span class="hero__text-one">ЧАСТНЫЙ</span>
-				<h1 class="hero__text-two">РИЭЛТОР</h1>
+				<h1 class="hero__text-two">РИЕЛТОР</h1>
 				<h2 class="hero__text_three">г. Тюмень</h2>
 				<div class="hero-btn-block">
-					<button class="hero-button btn-rest">
+
+					<div id="myModal" class="modal">
+						<!-- Modal content -->
+						<div class="modal-content">
+						  <span class="close">&times;</span>
+						  <form id="submitForm" action="sendmail.php" method="post">
+							<label class="label-form" for="name">Имя</label>
+							<input type="text" id="name" name="name" placeholder="Ваше имя">
+							<div class="error-message" id="name-error"></div>
+							
+							<label class="label-form" for="phone">Телефон</label>
+							<input type="text" id="phone" name="phone" placeholder="Ваш телефон">
+							<div class="error-message" id="phone-error"></div>
+							
+							<input type="submit" value="Оставить заявку">
+							<p class="form-text">Оставляя данные формы вы соглашаетесь с политикой конфиденциальности</p>
+						</form>
+						</div>
+					  </div>
+
+					<button id="callOrderBtn" class="hero-button btn-rest">
 						<div class="hero-btn-icon"></div>
 						<div class="hero-btn-text">ЗАКАЗАТЬ ЗВОНОК</div>
 					</button>
-					<p class="hero-desc">Сделки любой сложности, честно, быстро и безопасно. Моя задача - решить Ваш жилищный вопрос!</p>
+
+					<p class="hero-desc">Сделки любой сложности, честно, <span class="hero-desc__color">быстро</span> и <span class="hero-desc__color">безопасно</span>. Моя задача - решить Ваш жилищный вопрос!</p>
 				</div>
 			</div>
 
@@ -25,3 +51,5 @@ import './hero.style.scss'
 		<img src="assets/img/Persona-face%201280.png" alt="Gleb Moroz">
 	</div>
 </section>
+
+

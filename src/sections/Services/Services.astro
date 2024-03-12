@@ -1,0 +1,93 @@
+---
+import "./services.style.scss";
+
+const serviceListSold = [
+	'Юридическая консультация',
+	'Оценка рыночной стоимости',
+	'Профессиональная фото-съёмка квартиры',
+	'Реклама',
+	'Поиск покупателя',
+	'Сопровождение сделки',
+];
+
+const serviceListBuy = [
+	'Юридическая консультация',
+	'Одобрение ипотеки',
+	'Поиск квартиры/дома',
+	'Сопровождение сделки',
+	'Страхование ипотеки',
+	'Консультация',
+]
+
+const serviceListNewBuilding = [
+	'Подбор квартиры в новостройке',
+	'Одобрение ипотеки',
+	'Только проверенные застройщики',
+	'Дистанционная сделка',
+	'Помощь в приёме квартиры',
+]
+---
+<section class="services">
+	<div class="container">
+		<div class="services__top">
+			<span class="services__top-desc">МОИ ПРЕИМУЩЕСТВА</span>
+			<h2 class="services__top-title">УСЛУГИ И СТОИМОСТЬ</h2>
+		</div>
+		<div class="services__bot">
+			<article class="services__bot-article">
+				<h3 class="services__bot-article-title">ПРОДАЖА</h3>
+				<ul class="services__bot-article-list">
+					{
+						serviceListSold.map((serviceTitle) => (
+							<li class="services__bot-article-item ">{ serviceTitle }</li>
+						))
+					}
+				</ul>
+				<span
+					class="services__bot-article-desc"
+					<span
+					class="services__bot-article-desc"
+				>
+					<span class="accent">37 000 руб.</span> + <span
+						class="accent">1%</span
+					> от стоимости объекта недвижимости</span
+				>
+				<button class="article-arrow">
+					<a href="/prices" class="services__arrow-link"></a>
+				  </button>
+				  
+
+
+			</article>
+			<article class="services__bot-article">
+				<h3 class="services__bot-article-title">ПОКУПКА</h3>
+				<ul class="services__bot-article-list">
+					{
+						serviceListBuy.map((serviceTitle) => (
+							<li class="services__bot-article-item ">{ serviceTitle }</li>
+						))
+					}
+				</ul>
+				<span class="services__bot-article-desc">
+				<span class="accent">30 000 руб.</span> + <span class="accent">1%</span> от стоимости объекта недвижимости</span>
+				<button class="article-arrow"> <a href="/prices" class="services__arrow-link"></a> </button>
+			</article>
+
+			<article class="services__bot-article">
+				<h3 class="services__bot-article-title">НОВОСТРОЙКИ</h3>
+				<ul class="services__bot-article-list">
+					{
+						serviceListNewBuilding.map((serviceTitle) => (
+							<li class="services__bot-article-item article-item__bottom">{ serviceTitle }</li>
+						))
+					}
+				</ul>
+				<span class="services__bot-article-desc accent free-size">БЕСПЛАТНО</span>
+				<button class="article-arrow"> <a href="/prices" class="services__arrow-link"></a> </button>
+			</article>
+		</div>
+		<div class="center-container">
+			<button class="services-btn"><a href="/prices" class="services__arrow-link">Все услуги</a></button>
+		</div>
+	</div>
+</section>

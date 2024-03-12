@@ -1,0 +1,76 @@
+@import "styles/config/variables";
+
+.partners {
+padding-bottom: 5rem;
+
+@media (max-width: $breakpoint-xl) {
+	padding-bottom: 2rem;
+}
+
+}
+
+.partners__title {
+    text-align: center;
+	font-size: 70px;
+	font-weight: 400;
+	margin-bottom: 4rem;
+
+	@media (max-width: $breakpoint-xl) {
+		font-size: 50px;
+		margin-bottom: 3rem;
+	}
+
+	@media (max-width: $breakpoint-md) {
+		font-size: 30px;
+		margin-bottom: 2rem;
+	}
+
+	@media (max-width: $breakpoint-ls) {
+		font-size: 26px;
+		margin-bottom: 1rem;
+	}
+}
+
+.partners__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.partners__top, .partners__bot {
+    display: flex;
+    justify-content: space-around;
+    width: 100%; /* Адаптируйте под ваш дизайн */
+
+	@media (max-width: $breakpoint-ls) {
+		flex-wrap: wrap;
+	}
+
+}
+
+.partners__logo {
+    height: auto;
+    margin: 10px; /* Отступы между логотипами */
+
+	@media (max-width: $breakpoint-md) {
+		width: 20%;
+		height: 100px;
+	}
+
+	@media (max-width: $breakpoint-ls) {
+		width: 40%;
+		margin: 5px;
+	}
+}
+
+/* Дополнительно: если SVG маленькие, можно управлять их размером непосредственно через класс */
+svg.partners__logo {
+    width: 150px; /* Пример увеличения размера SVG */
+    height: auto;
+}
+
+.logo__height {
+	@media (max-width: $breakpoint-md) {
+		height: 100px;
+	}
+}

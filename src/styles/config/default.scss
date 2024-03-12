@@ -1,4 +1,7 @@
 @import "variables";
+@import "../utils";
+@import "typography";
+@import "normalize";
 
 // COMMON
 html {
@@ -12,16 +15,16 @@ html {
 // CONTAINER
 
 .container {
-	width: 100%;
+	width: -webkit-fill-available;
 	padding: 0 1rem;
 	margin: 0 auto;
 }
 
-@media (width > $breakpoint-md) {
+@media (width <= $breakpoint-md) {
 	.container {
 		max-width: $containers-md;
 		padding: 0 1rem;
-	}
+		}  
 }
 
 @media (width > $breakpoint-xl) {
@@ -37,3 +40,25 @@ html {
 		padding: 0 1rem;
 	}
 }
+
+
+
+
+// Font Family
+
+h1,h2 {
+	font-family: "Russo One";
+	font-weight: 400;
+}
+
+.font-weight-400 {
+	font-weight: 400;
+}
+
+
+// Flex
+
+.flex {
+	display: flex;
+}
+

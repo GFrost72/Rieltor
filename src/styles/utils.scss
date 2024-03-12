@@ -1,0 +1,11 @@
+@import "config/variables";
+
+.accent {
+	color: $text-color-secondary;
+}
+
+h1 {
+	@media (max-width: $breakpoint-ls) {
+		font-size: 26px;
+	}
+}

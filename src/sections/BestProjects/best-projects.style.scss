@@ -1,0 +1,227 @@
+@import "styles/config/variables";
+
+.slider-title {
+    font-size: 60px;
+    z-index: 30;
+    position: inherit;
+    margin-bottom: 3rem;
+    justify-content: center;
+    display: flex;
+}
+
+.best-projects {
+	//height: 600px;
+    padding: 2rem 0;
+	
+	// TODO: для чего отдельно задавать высоту контейнера, если можно регулировать высоту слайдера?
+	//@media (max-width: 1500px) {
+	//	height: 466px;
+	//}
+	//
+	//@media (max-width: $breakpoint-xxl) {
+	//	height: 430px;
+	//}
+	//
+	//@media (max-width: $breakpoint-xl) {
+	//	height: 320px;
+	//}
+	//
+	//@media (max-width: $breakpoint-md) {
+	//	height: 230px;
+	//}
+	//
+	//@media (max-width: $breakpoint-ls) {
+	//	height: 140px;
+	//}
+	//
+	//@media (max-width: $breakpoint-sm) {
+	//	height: 100px;
+	//}
+
+}
+
+.custom-slider {
+	height: 600px;
+
+	@media (max-width: 1500px) {
+		height: 466px;
+	}
+
+	@media (max-width: $breakpoint-xxl) {
+		height: 430px;
+	}
+
+	@media (max-width: $breakpoint-xl) {
+		height: 320px;
+	}
+
+	@media (max-width: $breakpoint-md) {
+		height: 230px;
+	}
+
+	@media (max-width: $breakpoint-ls) {
+		height: 100dvmin;
+	}
+
+	@media (max-width: $breakpoint-sm) {
+		height: 100px;
+	}
+
+}
+
+.swiper-custom-slide {
+	height: 600px;
+
+	img {
+		width: 100%;
+		height: 100%;
+
+		object-fit: cover;
+	}
+}
+
+.slider-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 60px;
+	margin: 0;
+	font-family: $font-secondary-name;
+	z-index: 5;
+	text-align: center;
+	min-width: 300px;
+
+	@media (max-width: 1500px) {
+		font-size: 50px;
+	}
+
+	@media (max-width: $breakpoint-xxl) {
+		font-size: 42px;
+	}
+
+	@media (max-width: $breakpoint-xl) {
+		font-size: 32px;
+	}
+
+	@media (max-width: $breakpoint-md) {
+		font-size: 24px;
+	}
+
+	@media (max-width: $breakpoint-ls) {
+		font-size: 18px;
+		top: 53%;
+		min-width: 270px;
+	}
+
+	@media (max-width: $breakpoint-sm) {
+		font-size: 12px;
+	}
+}
+
+// TODO: если нужно затемнить только картинку - это лишнее
+//.image-container::after {
+//	content: '';
+//	position: absolute;
+//	top: 0;
+//	left: 0;
+//	right: 0;
+//	bottom: 0;
+//	background: rgba(0, 0, 0, 0.5);
+//	/* 50% dimming */
+//	z-index: 1;
+//}
+
+.dimmed-image {
+	filter: brightness(40%);
+}
+
+
+.swiper {
+
+	.swiper-button-next,
+	.swiper-button-prev {
+		background-color: $main-primary;
+		border-radius: 50%;
+		/* скругление углов */
+		width: 90px;
+		/* ширина кнопки */
+		height: 90px;
+		/* высота кнопки */
+		top: var(--swiper-navigation-top-offset, 45%);
+		
+		&:hover {
+			background: #2686a6;
+			transition: ease-in-out 0.3s;
+		}
+	
+		&:active {
+			background: #36c3ee;
+			transition: ease-in-out 0.3s;
+		}
+		
+		@media (max-width: $breakpoint-xl) {
+			width: 60px;
+			height: 60px;
+		}
+
+		@media (max-width: $breakpoint-md) {
+			width: 45px;
+			height: 45px;
+		}
+
+		@media (max-width: $breakpoint-ls) {
+			width: 30px;
+			height: 30px;
+			top: var(--swiper-navigation-top-offset, 55%);
+		}
+	
+	}
+
+	.swiper-button-next {
+		right: 3rem;
+		/* Отступ справа для кнопки "Вперед" */
+
+		@media (max-width: $breakpoint-xl) {
+			right: 2rem;
+		}
+
+		@media (max-width: $breakpoint-ls) {
+			right: 1rem;
+		}
+
+	}
+
+	.swiper-button-prev {
+		left: 3rem;
+		/* Отступ слева для кнопки "Назад" */
+
+		@media (max-width: $breakpoint-xl) {
+			left: 2rem;
+		}
+
+		@media (max-width: $breakpoint-ls) {
+			left: 1rem;
+		}
+
+	}
+
+	.swiper-button-next:after,
+	.swiper-button-prev:after {
+		color: #fff;
+
+		@media (max-width: $breakpoint-md) {
+			scale: 0.5;
+		}
+
+		@media (max-width: $breakpoint-ls) {
+			scale: 0.3;
+		}
+	}
+
+	.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+		@media (max-width: 380px) {
+			top: var(--swiper-pagination-top, 68%);
+		}
+	}
+}

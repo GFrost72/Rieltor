@@ -1,16 +1,27 @@
 ---
-import LayoutCommon from '../layouts/LayoutCommon/LayoutCommon.astro';
+import LayoutCommon from '@layouts/LayoutCommon/LayoutCommon.astro';
 import Header from '@components/Header/Header.astro';
 import SectionHero from '@sections/Hero/Hero.astro';
 import SectionAboutMe from '@sections/AboutMe/AboutMe.astro';
+import SectionServices from '@sections/Services/Services.astro';
+import BestProjects from '@sections/BestProjects/BestProjects.astro';
+import Partners from '@sections/Partners/Partners.astro';
+import Footer from '@components/Footer/Footer.astro';
+import RightsProtection from '@sections/RightsProtection/RightsProtection.astro';
+
 
 ---
 
 <LayoutCommon 
-	title="Мороз Глеб - частный риэлтор, продажа-покупка недвижимости в г. Тюмень"
+	title="Мороз Глеб - частный риелтор, продажа-покупка недвижимости в г. Тюмень"
 >
 	<Header />
-	
 	<SectionHero />
 	<SectionAboutMe />
+	<SectionServices />
+	<BestProjects />
+	<Partners />
+	<Footer />
+	<RightsProtection />
+
 </LayoutCommon>

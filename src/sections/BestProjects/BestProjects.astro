@@ -1,0 +1,30 @@
+---
+import './best-projects.style.scss';
+import { SwiperSlider } from './swiper-slider';
+
+const slideSources = [
+	{
+		src: 'assets/img/slide-1.webp',
+		alt: 'slide 1',
+		text: 'ЛУЧШИЕ ПРОЕКТЫ ГОРОДА'
+	},
+	{
+		src: 'assets/img/slide-2.webp',
+		alt: 'slide 2',
+		text: 'ЕВРОПЕЙСКИЙ'
+	},
+	{
+		src: 'assets/img/slide-4.jpeg',
+		alt: 'slide 4',
+		text: 'ДОМАШНИЙ'
+	},
+]
+---
+
+<section class="best-projects">
+	<!-- <h2 class="slider-title">ЛУЧШИЕ ПРОЕКТЫ ГОРОДА</h2> -->
+	<SwiperSlider 
+		slideSources={slideSources}
+		client:only="react"
+	/>
+</section>
