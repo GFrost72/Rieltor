@@ -62,3 +62,23 @@ h1,h2 {
 	display: flex;
 }
 
+// ScrollBar
+
+::-webkit-scrollbar {
+	width: 13px;
+  }
+  
+  ::-webkit-scrollbar-track {
+	background: #22b4e1;
+	border-radius: 10px; 
+  }
+  
+  ::-webkit-scrollbar-thumb {
+	background: rgb(255, 255, 255);
+	border-radius: 10px; 
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+	background: rgb(130, 129, 129);
+  }
+  

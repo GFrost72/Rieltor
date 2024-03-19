@@ -25,8 +25,7 @@ const SwiperSlider = ({ slideSources }) => {
                 >
                     <p className="slider-text">{slideSource.text}</p>
 			
-		  			{/*	TODO: для чего обертка? Можно убрать */}
-                    {/* Apply the dimming effect directly to the image */}
+		  		    {/* Apply the dimming effect directly to the image */}
                     {/*<div className="image-container">*/}
                     <img src={slideSource.src} alt={slideSource.alt} className="dimmed-image"/>
                     {/*</div>*/}

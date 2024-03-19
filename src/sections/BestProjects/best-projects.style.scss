@@ -10,34 +10,7 @@
 }
 
 .best-projects {
-	//height: 600px;
-    padding: 2rem 0;
-	
-	// TODO: для чего отдельно задавать высоту контейнера, если можно регулировать высоту слайдера?
-	//@media (max-width: 1500px) {
-	//	height: 466px;
-	//}
-	//
-	//@media (max-width: $breakpoint-xxl) {
-	//	height: 430px;
-	//}
-	//
-	//@media (max-width: $breakpoint-xl) {
-	//	height: 320px;
-	//}
-	//
-	//@media (max-width: $breakpoint-md) {
-	//	height: 230px;
-	//}
-	//
-	//@media (max-width: $breakpoint-ls) {
-	//	height: 140px;
-	//}
-	//
-	//@media (max-width: $breakpoint-sm) {
-	//	height: 100px;
-	//}
-
+	 padding: 2rem 0;
 }
 
 .custom-slider {
@@ -119,18 +92,6 @@
 	}
 }
 
-// TODO: если нужно затемнить только картинку - это лишнее
-//.image-container::after {
-//	content: '';
-//	position: absolute;
-//	top: 0;
-//	left: 0;
-//	right: 0;
-//	bottom: 0;
-//	background: rgba(0, 0, 0, 0.5);
-//	/* 50% dimming */
-//	z-index: 1;
-//}
 
 .dimmed-image {
 	filter: brightness(40%);

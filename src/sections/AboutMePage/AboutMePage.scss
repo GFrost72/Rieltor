@@ -1,0 +1,205 @@
+@import "styles/config/variables";
+
+.about-me-page {
+	padding: 2rem 0 3rem;
+
+	@media (width <=$breakpoint-xl) {
+		padding: 2rem 0 2rem;
+	}
+
+	@media (width <=$breakpoint-md) {
+		padding: 0rem 0 1rem;
+		padding-bottom: 2rem;
+	}
+}
+
+.about-me-page__wrapper {
+	background-color: #212121;
+	padding: 40px 60px;
+	max-width: 100%;
+	/* Убедитесь, что wrapper не выходит за пределы экрана */
+	padding: 40px 60px;
+	/* Уже задано, можно адаптировать под разные размеры экрана как показано ниже */
+	box-sizing: border-box;
+	/* Убедитесь, что padding включен в общую ширину */
+
+	@media (width <=$breakpoint-md) {
+		padding: 20px 30px;
+	}
+
+	@media (width <=$breakpoint-ls) {
+		padding: 0;
+	}
+}
+
+.about-me-page__top {
+	margin-bottom: 3rem;
+
+	@media (width <=$breakpoint-md) {
+		margin-bottom: 0;
+	}
+
+	@media (width <=$breakpoint-md) {
+		padding: 1rem;
+	}
+
+}
+
+.about-me-page__title {
+	color: $text-color-secondary;
+	font-size: 60px;
+	margin-bottom: 10px;
+
+	@media (width <=$breakpoint-xl) {
+		font-size: 40px;
+	}
+
+	@media (width <=$breakpoint-md) {
+		font-size: 30px;
+		margin-bottom: 6px;
+	}
+
+	@media (width <=$breakpoint-ls) {
+		font-size: 30px;
+		line-height: 36px;
+		margin-bottom: 6px;
+	}
+}
+
+.about-me-page__subtitle {
+	font-size: 40px;
+
+	@media (width <=$breakpoint-xl) {
+		font-size: 32px;
+	}
+
+	@media (width <=$breakpoint-md) {
+		font-size: 28px;
+	}
+
+	@media (width <=$breakpoint-ls) {
+		font-size: 26px;
+		line-height: 36px;
+		margin-bottom: 0px;
+	}
+}
+
+.page-bottom__content-block {
+	margin-bottom: 4rem;
+
+	@media (width <=$breakpoint-ls) {
+		margin-bottom: 3rem;
+	}
+}
+
+
+.about-me-page__bottom-title {
+	color: $text-color-secondary;
+    font-size: 30px;
+	margin-bottom: 20px;
+	font-family: $font-secondary;
+    font-weight: 400;
+}
+
+.about-me-page__bottom {
+	background-color: #1A1A1A;
+	padding: 60px 100px;
+	display: flex;
+	flex-direction: column;
+
+	@media (width <=$breakpoint-xxl) {
+		padding: 30px 51px;
+	}
+
+	@media (width <=$breakpoint-md) {
+		padding: 22px 28px;
+	}
+
+
+}
+
+.about-me-page__content {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 32px;
+	gap: 15px;
+
+	@media (width <=$breakpoint-md) {
+		margin-bottom: 24px;
+		flex-direction: column-reverse;
+	}
+
+	@media (width <=$breakpoint-ls) {
+		margin-bottom: 40px;
+	}
+}
+
+.about-me-page__text {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	max-width: 62%;
+
+	@media (width <=$breakpoint-md) {
+		gap: 10px;
+		max-width: 100%;
+	}
+
+	@media (width <=$breakpoint-ls) {
+		gap: 15px;
+	}
+}
+
+.about-me-page__description {
+	word-wrap: break-word;
+	line-height: 1.4;
+	font-size: 18px;
+    font-family: $font-primary;
+
+	@media (width <=$breakpoint-md) {
+		font-size: 14px;
+	}
+
+	@media (width <=$breakpoint-xl) {
+		line-height: 1.6;
+	}
+}
+
+.about-me-page__image {
+	border-radius: 20px;
+	max-height: 100%;
+	max-width: 100%;
+	object-fit: contain;
+
+	@media (width <=$breakpoint-md) {
+		margin: 1rem 0;
+		max-width: 75%;
+	}
+
+	@media (width <=$breakpoint-ls) {
+		margin: 0;
+	}
+}
+
+.about-me-page__text-bot {
+	margin-top: auto;
+	/* Это вытолкнет текст вниз, если есть свободное пространство */
+	max-width: 100%;
+	margin-top: auto;
+	max-width: 100%;
+	flex-direction: column;
+	display: flex;
+	gap: 15px;
+}
+
+.about-me-page__imageblock {
+	width: 55%;
+
+	@media (width <=$breakpoint-xxl) {
+		width: 88%;
+	}
+
+	@media (width <=$breakpoint-xxl) {
+		width: 110%;
+	}
+}

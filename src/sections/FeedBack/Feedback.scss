@@ -1,6 +1,6 @@
 @import "styles/config/variables";
 
-.price {
+.feedback {
 	padding: 2rem 0 3rem;
 
 	@media (width <=$breakpoint-xl) {
@@ -13,21 +13,21 @@
 	}
 }
 
-.price__wrapper {
+.feedback__wrapper {
 	background-color: #212121;
 	padding: 40px 60px;
 
 	@media (width <=$breakpoint-md) {
-		padding: 20px 30px;
+		padding: 20px 18px;
 	}
 
-	@media (width <=$breakpoint-ls) {
+	@media (max-width: 356px) {
 		padding: 0;
 	}
 
 }
 
-.price__top {
+.feedback__top {
 	margin-bottom: 3rem;
 
 	@media (width <=$breakpoint-md) {
@@ -37,11 +37,9 @@
 	@media (width <=$breakpoint-md) {
 		padding: 1rem;
 	}
-
-
 }
 
-.price__title {
+.feedback__title {
 	color: $text-color-secondary;
 	font-size: 60px;
 	margin-bottom: 10px;
@@ -62,7 +60,7 @@
 	}
 }
 
-.price__second-title {
+.feedback__second-title {
 	font-size: 40px;
 
 	@media (width <=$breakpoint-xl) {
@@ -81,23 +79,31 @@
 
 }
 
-.price__bot-article {
+.feedback__bot-article {
 	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: flex-start;
 	padding: 20px;
-	background: rgba(255, 255, 255, 0.05);
+	display: flex;
+	flex-direction: row;
+	/* Arrange items in a row */
+	align-items: center;
+	background-color: #000000;
+	/* Replace with your desired background color */
+	color: #ffffff;
+	/* Replace with your desired text color */
+	padding: 26px 30px;
+	border-radius: 8px;
+	max-width: 800px;
+	/* Adjust as per your design */
 	gap: 10px;
 	width: 40%;
-	margin: 20px;
+	margin: 15px;
 	position: relative;
-	padding: 28px 30px;
-
+	align-items: flex-start;
 
 	@media (width <=$breakpoint-xl) {
 		max-width: 320px;
 		padding: 18px 27px;
+		flex-direction: column;
 	}
 
 	@media (width <=$breakpoint-md) {
@@ -108,42 +114,55 @@
 
 	@media (width <=$breakpoint-ls) {
 		padding: 10px 15px 15px 18px;
-		margin-bottom: 16px;
+		margin-bottom: 26px;
 		width: 100%;
-		
+
 	}
 }
 
-.price__bot {
+.feedback__bot {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	/* Обеспечивает равномерное распределение места между элементами */
-
+	margin-bottom: 2rem;
 
 	@media (width <=$breakpoint-xl) {
-		margin-bottom: 0px;
+		margin-bottom: 2rem;
 	}
 
 	@media (width <=$breakpoint-ls) {
-		justify-content: center; // Центрируем карточки, когда они идут в один столбец
+		justify-content: center;
+		margin-bottom: 0rem;
 	}
 }
 
+.feedback__bot-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-basis: 50%;
+	max-width: 30%;
 
-.price__bot-article-title {
+	@media (width <=$breakpoint-xl) {
+		max-width: 100%;
+	}
+}
+
+.feedback__bot-article-title {
 	color: #fff;
 	font-family: Russo One, Arial, san-serif, serif;
-	font-size: 40px;
+	font-size: 26px;
 	font-weight: 400;
 	letter-spacing: 0;
-	line-height: 45px;
+	line-height: 36px;
 	margin-bottom: 10px;
 	text-align: left;
+	margin-bottom: 43%;
 
 	@media (width <=$breakpoint-xl) {
 		line-height: 32px;
 		font-size: 28px;
+		margin-bottom: 10%;
 	}
 
 	@media (width <=$breakpoint-md) {
@@ -153,80 +172,57 @@
 	}
 
 	@media (width <=$breakpoint-ls) {
-		margin-bottom: 6px;
+		margin-bottom: 15px;
 		font-size: 22px;
 		line-height: 26px;
 	}
 }
 
-.price__bot-article-item {
+.feedback__bot-image {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	margin-bottom: 20px;
+	object-fit: cover;
+
+	@media (width <=$breakpoint-xl) {
+		align-self: baseline;
+	}
+
+	@media (width <=$breakpoint-ls) {
+		height: 75px;
+		margin-bottom: 12px;
+		width: 75px;
+	}
+}
+
+.feedback-desc {
+	flex-basis: 70%;
+	font-size: 16px;
+	max-width: 70%;
 	margin-bottom: 18px;
-	font-size: 20px;
+	font-size: 22px;
 	display: flex;
 	align-items: center;
-	font-family: $font-secondary;
+	font-family: $font-primary;
 	font-weight: 400;
 	line-height: 1.5;
 
 	@media (width <=$breakpoint-xl) {
-		font-size: 16px;
-		margin-bottom: 14px;
-	}
-
-	@media (width <=$breakpoint-md) {
-		font-size: 14px;
-		margin-bottom: 10px;
-	}
-
-	@media (width <=$breakpoint-ls) {
-		font-size: 14px;
-		margin-bottom: 10px;
-		min-width: 247px;
-	}
-}
-
-.price__bot-article-item::before {
-	content: '';
-	/* Добавляем пустое содержимое */
-	display: inline-block;
-	width: 10px;
-	/* Ширина маркера */
-	height: 10px;
-	/* Высота маркера */
-	background-color: $main-primary;
-	border-radius: 50%;
-	/* Делаем маркер круглым */
-	margin-right: 10px;
-	/* Отступ между маркером и текстом */
-	aspect-ratio: 1;
-}
-
-
-.price__bot-article-desc {
-	font-size: 34px;
-	font-weight: 700;
-	max-width: 350px;
-	text-align: center;
-	max-width: 240px;
-	margin-top: auto;
-	/* Перемещаем описание вниз карточки */
-	align-self: flex-end;
-
-
-	@media (width <=$breakpoint-xl) {
-		font-size: 24px;
-	}
-
-	@media (width <=$breakpoint-md) {
-		font-size: 18px;
-		max-width: 170px;
-	}
-
-	@media (width <=$breakpoint-ls) {
+		min-width: 100%;
 		font-size: 20px;
-		align-self: center;
+	}
+
+
+	@media (width <=$breakpoint-md) {
+		font-size: 16px;
+	}
+
+	@media (width <=$breakpoint-ls) {
+		font-size: 16px;
 	}
 }
+
 
 .article-item__bottom:last-child {
 	margin-bottom: 68px;
@@ -240,11 +236,11 @@
 	}
 }
 
-.price__bot-article-list {
+.feedback__bot-article-list {
 	margin-bottom: 10px;
 }
 
-.price-position {
+.feedback-position {
 	left: 55%;
 }
 
@@ -257,5 +253,30 @@
 
 	@media (width <=$breakpoint-md) {
 		max-height: 330px;
+	}
+}
+
+
+.feedback__bot-feedback {
+	font-size: 34px;
+	font-weight: 700;
+	text-align: center;
+	margin-top: auto;
+	/* Перемещаем описание вниз карточки */
+	align-self: flex-end;
+	display: block;
+
+
+	@media (width <=$breakpoint-xl) {
+		font-size: 28px;
+	}
+
+	@media (width <=$breakpoint-md) {
+		font-size: 24px;
+	}
+
+	@media (width <=$breakpoint-ls) {
+		font-size: 20px;
+		align-self: center;
 	}
 }

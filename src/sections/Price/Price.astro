@@ -35,8 +35,8 @@ const priceListIpoteka = [
 ];
 
 const priceListNewBuilding = [
-	"Консультация по рынок новостроек в Тюмени",
-	"Согласования и организация всех просмотров",
+	"Консультация по рынку новостроек в Тюмени",
+	"Согласование и организация всех просмотров",
 	"Сопровождение сделки под ключ",
 	"Индивидуальные скидки",
 	"Единые цены с застройщикам",
@@ -81,131 +81,156 @@ const priceListAccompaniment = [
 <section class="price">
 	<div class="container">
 		<div class="price__wrapper">
-		<div class="price__top">
-			<h1 class="price__title">УСЛУГИ</h1>
-			<h2 class="price__second-title">ВСЕ КОНСУЛЬТАЦИИ - БЕСПЛАТНО</h2>
+			<div class="price__top">
+				<h1 class="price__title">УСЛУГИ</h1>
+				<h2 class="price__second-title">
+					ВСЕ КОНСУЛЬТАЦИИ - БЕСПЛАТНО
+				</h2>
+			</div>
+			<div class="price__bot">
+				<article class="price__bot-article">
+					<h3 class="price__bot-article-title">
+						Загородная недвижимость
+					</h3>
+					<ul class="price__bot-article-list">
+						{
+							priceListZagorod.map((priceTitle) => (
+								<li class="price__bot-article-item ">
+									{priceTitle}
+								</li>
+							))
+						}
+					</ul>
+
+					<span class="price__bot-article-desc"
+						>от <span class="accent">50 000 руб.</span>
+					</span>
+				</article>
+
+				<article class="price__bot-article">
+					<h3 class="price__bot-article-title">
+						Вторичная недвижимость
+					</h3>
+					<ul class="price__bot-article-list">
+						{
+							priceListSecondary.map((priceTitle) => (
+								<li class="price__bot-article-item ">
+									{priceTitle}
+								</li>
+							))
+						}
+					</ul>
+
+					<span class="price__bot-article-desc price-position"
+						>от
+						<span class="accent">30 000 руб.</span> + <span
+							class="accent">1%</span
+						>
+					</span>
+				</article>
+
+				<article class="price__bot-article">
+					<h3 class="price__bot-article-title">Одобрение ипотеки</h3>
+					<ul class="price__bot-article-list">
+						{
+							priceListIpoteka.map((priceTitle) => (
+								<li class="price__bot-article-item article-item__bottom">
+									{priceTitle}
+								</li>
+							))
+						}
+					</ul>
+					<span class="price__bot-article-desc accent"
+						>5 000 руб.</span
+					>
+				</article>
+
+				<article class="price__bot-article">
+					<h3 class="price__bot-article-title">
+						Покупка новостройки
+					</h3>
+					<ul class="price__bot-article-list">
+						{
+							priceListNewBuilding.map((priceTitle) => (
+								<li class="price__bot-article-item ">
+									{priceTitle}
+								</li>
+							))
+						}
+					</ul>
+					<span class="price__bot-article-desc accent">БЕСПЛАТНО</span
+					>
+				</article>
+
+				<article class="price__bot-article">
+					<h3 class="price__bot-article-title">Ремонт</h3>
+					<ul class="price__bot-article-list">
+						{
+							priceListRepair.map((priceTitle) => (
+								<li class="price__bot-article-item ">
+									{priceTitle}
+								</li>
+							))
+						}
+					</ul>
+					<span class="price__bot-article-desc accent">БЕСПЛАТНО</span
+					>
+				</article>
+
+				<article class="price__bot-article">
+					<h3 class="price__bot-article-title">Строительство дома</h3>
+					<ul class="price__bot-article-list">
+						{
+							priceListBuilding.map((priceTitle) => (
+								<li class="price__bot-article-item article-item__bottom">
+									{priceTitle}
+								</li>
+							))
+						}
+					</ul>
+					<span class="price__bot-article-desc accent free-size"
+						>ДОГОВОРНАЯ</span
+					>
+				</article>
+
+				<article class="price__bot-article">
+					<h3 class="price__bot-article-title">
+						Составление договора купли-продажи
+					</h3>
+					<ul class="price__bot-article-list">
+						{
+							priceListDocuments.map((priceTitle) => (
+								<li class="price__bot-article-item article-item__bottom">
+									{priceTitle}
+								</li>
+							))
+						}
+					</ul>
+					<span class="price__bot-article-desc price-position"
+						>от
+						<span class="accent">10 000 руб.</span>
+					</span>
+				</article>
+
+				<article class="price__bot-article height">
+					<h3 class="price__bot-article-title">
+						Сопрвождение сделки без поиска
+					</h3>
+					<ul class="price__bot-article-list">
+						{
+							priceListAccompaniment.map((priceTitle) => (
+								<li class="price__bot-article-item article-item__bottom">
+									{priceTitle}
+								</li>
+							))
+						}
+					</ul>
+					<span class="price__bot-article-desc price-position"
+						>от
+						<span class="accent">50 000 руб.</span>
+					</span>
+				</article>
+			</div>
 		</div>
-		<div class="price__bot">
-
-			<article class="price__bot-article">
-				<h3 class="price__bot-article-title">Загородная недвижимость</h3>
-				<ul class="price__bot-article-list">
-					{
-						priceListZagorod .map((priceTitle) => (
-							<li class="price__bot-article-item ">
-								{priceTitle}
-							</li>
-						))
-					}
-				</ul>
-			
-				<span class="price__bot-article-desc">от <span class="accent">50 000 руб.</span> </span>
-				
-				</article>
-
-			<article class="price__bot-article">
-				<h3 class="price__bot-article-title">Вторичная недвижимость</h3>
-				<ul class="price__bot-article-list">
-					{
-						priceListSecondary.map((priceTitle) => (
-							<li class="price__bot-article-item ">
-								{priceTitle}
-							</li>
-						))
-					}
-				</ul>
-			
-				<span class="price__bot-article-desc price-position">от
-				<span class="accent">30 000 руб.</span> + <span class="accent">1%</span>
-				</article>
-
-			<article class="price__bot-article">
-				<h3 class="price__bot-article-title">Одобрение ипотеки</h3>
-				<ul class="price__bot-article-list">
-					{
-						priceListIpoteka.map((priceTitle) => (
-							<li class="price__bot-article-item article-item__bottom">
-								{priceTitle}
-							</li>
-						))
-					}
-				</ul>
-				<span class="price__bot-article-desc accent">5 000 руб.</span>
-				</article>
-
-			<article class="price__bot-article">
-				<h3 class="price__bot-article-title">Покупка новостройки</h3>
-				<ul class="price__bot-article-list">
-					{
-						priceListNewBuilding.map((priceTitle) => (
-							<li class="price__bot-article-item ">
-								{priceTitle}
-							</li>
-						))
-					}
-				</ul>
-				<span class="price__bot-article-desc accent">БЕСПЛАТНО</span>
-			</article>
-
-			<article class="price__bot-article">
-				<h3 class="price__bot-article-title">Ремонт</h3>
-				<ul class="price__bot-article-list">
-					{
-						priceListRepair.map((priceTitle) => (
-							<li class="price__bot-article-item ">
-								{priceTitle}
-							</li>
-						))
-					}
-				</ul>
-				<span class="price__bot-article-desc accent">БЕСПЛАТНО</span>
-			</article>
-
-			<article class="price__bot-article">
-				<h3 class="price__bot-article-title">Строительство дома</h3>
-				<ul class="price__bot-article-list">
-					{
-						priceListBuilding.map((priceTitle) => (
-							<li class="price__bot-article-item article-item__bottom">
-								{priceTitle}
-							</li>
-						))
-					}
-				</ul>
-				<span class="price__bot-article-desc accent free-size"
-					>ДОГОВОРНАЯ</span>
-				</article>
-
-			<article class="price__bot-article">
-				<h3 class="price__bot-article-title">Составление договора купли-продажи</h3>
-				<ul class="price__bot-article-list">
-					{
-						priceListDocuments.map((priceTitle) => (
-							<li class="price__bot-article-item article-item__bottom">
-								{priceTitle}
-							</li>
-						))
-					}
-				</ul>
-				<span class="price__bot-article-desc accent"
-					>10 000 руб.</span>
-				</article>
-
-			<article class="price__bot-article height">
-				<h3 class="price__bot-article-title">Сопрвождение сделки без поиска</h3>
-				<ul class="price__bot-article-list">
-					{
-						priceListAccompaniment.map((priceTitle) => (
-							<li class="price__bot-article-item article-item__bottom">
-								{priceTitle}
-							</li>
-						))
-					}
-				</ul>
-				<span class="price__bot-article-desc accent"
-					>50 000 руб</span>
-				</article>
-		</div>
-	</div>
 	</div>
 </section>
