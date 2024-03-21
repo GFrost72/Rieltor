@@ -406,7 +406,7 @@
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 10; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -507,4 +507,16 @@ form > p {
     height: 20px;
     display: none; /* Скрыть элементы по умолчанию */
 	height: 32px;
+}
+
+.privacy-policy-link {
+	text-decoration: underline;
+
+	&:hover{
+		color: #36c3ee;
+	}
+
+	&:active{
+		color: #268aa8;
+	}
 }

@@ -315,3 +315,123 @@
 		padding: 9px 18px;
 	}	
 }
+
+
+/* Modal base styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #0E0E0E;
+    margin: 15% auto; /* 15% from the top and centered */
+	padding: 30px;
+    border: 1px solid #888;
+    width: 15%; /* Could be more or less, depending on screen size */
+    color: white; /* Text color */
+	border-radius: 40px;
+
+	@media (max-width: 1500px) {
+		width: 25%;
+	}
+
+	@media (max-width: $breakpoint-xl) {
+		width: 30%;
+	}
+
+	@media (max-width: $breakpoint-md) {
+		width: 37%;
+	}
+
+	@media (max-width: $breakpoint-ls) {
+		width: 65%;
+	}
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+	top: -15px;
+    right: -10px;
+    position: relative;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Add styles for the form elements here */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type=text], input[type=submit] {
+	margin-bottom: 25px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+	background-color: #4d4d4d;
+	color: white;
+
+	@media (max-width: $breakpoint-ls) {
+		margin-bottom: 20px;
+	}
+	
+}
+
+input[type=submit] {
+    background-color: #22b4e1;
+    color: white;
+	font-family: $font-secondary;
+}
+
+/* Add more styles for the text at the bottom of the modal */
+form > p {
+    font-size: 0.8em;
+}
+
+.label-form {
+	margin-bottom: 10px;
+}
+
+.form-text {
+	color: white;
+	margin: 0;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    height: 20px;
+    display: none; /* Скрыть элементы по умолчанию */
+	height: 32px;
+}
+
+.privacy-policy-link {
+	text-decoration: underline;
+
+	&:hover{
+		color: #36c3ee;
+	}
+
+	&:active{
+		color: #268aa8;
+	}
+}

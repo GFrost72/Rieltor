@@ -1,0 +1,98 @@
+@import "styles/config/variables";
+
+.privacy-policy-page {
+	padding: 2rem 0 3rem;
+
+	@media (width <=$breakpoint-xl) {
+		padding: 2rem 0 2rem;
+	}
+
+	@media (width <=$breakpoint-md) {
+		padding: 0rem 0 1rem;
+		padding-bottom: 2rem;
+	}
+}
+
+.privacy-policy-page__wrapper {
+	background-color: #212121;
+	padding: 40px 60px;
+	max-width: 100%;
+	/* Убедитесь, что wrapper не выходит за пределы экрана */
+	padding: 40px 60px;
+	/* Уже задано, можно адаптировать под разные размеры экрана как показано ниже */
+	box-sizing: border-box;
+	/* Убедитесь, что padding включен в общую ширину */
+
+	@media (width <=$breakpoint-md) {
+		padding: 20px 30px;
+	}
+
+	@media (width <=$breakpoint-ls) {
+		padding: 20px;
+	}
+}
+
+.privacy-policy-page__subtitle {
+	font-size: 30px;
+	margin-bottom: 30px;
+	font-family: $font-secondary;
+
+	@media (width <=$breakpoint-xl) {
+		font-size: 32px;
+	}
+
+	@media (width <=$breakpoint-md) {
+		font-size: 28px;
+		margin-bottom: 15px;
+	}
+
+	@media (width <=$breakpoint-ls) {
+		font-size: 26px;
+		line-height: 36px;
+		margin-bottom: 20px;
+	}
+}
+
+.privacy-policy-titles {
+	font-size: 26px;
+	margin-bottom: 20px;
+	font-weight: 400;
+	font-family: $font-primary;
+	font-weight: 700;
+
+	@media (width <=$breakpoint-md) {
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+}
+
+
+.privacy-policy-page__description {
+	word-wrap: break-word;
+	line-height: 1.4;
+	font-family: $font-primary;
+	font-size: 20px;
+	margin-bottom: 20px;
+
+	@media (width <=$breakpoint-md) {
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+
+	@media (width <=$breakpoint-xl) {
+		line-height: 1.6;
+	}
+}
+
+.privacy-policy-link {
+	text-decoration: underline;
+	color: #36c3ee;
+
+	&:hover{
+		color: #268aa8;
+	}
+
+	&:active{
+		color: #23b5e1;
+	}
+}
