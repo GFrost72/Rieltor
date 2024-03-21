@@ -3,10 +3,6 @@ import './hero.style.scss'
 
 ---
 
-<script src="./modal.js"></script>
-<script src="./validator.js"></script>
-<script src="./formAJAX.js"></script>
-
 <section class="hero">
 	<div class="container">
 		<div class="hero-wrapper">
@@ -16,26 +12,7 @@ import './hero.style.scss'
 				<h2 class="hero__text_three">г. Тюмень</h2>
 				<div class="hero-btn-block">
 
-					<div id="myModal" class="modal">
-						<!-- Modal content -->
-						<div class="modal-content">
-						  <span class="close">&times;</span>
-						  <form id="submitForm" action="sendmail.php" method="post">
-							<label class="label-form" for="name">Имя</label>
-							<input type="text" id="name" name="name" placeholder="Ваше имя">
-							<div class="error-message" id="name-error"></div>
-							
-							<label class="label-form" for="phone">Телефон</label>
-							<input type="text" id="phone" name="phone" placeholder="Ваш телефон">
-							<div class="error-message" id="phone-error"></div>
-							
-							<input type="submit" value="Оставить заявку">
-							<p class="form-text">Оставляя данные формы вы соглашаетесь с <a class="privacy-policy-link"  href="/privacypolicy">политикой конфиденциальности</a></p>
-						</form>
-						</div>
-					  </div>
-
-					<button id="callOrderBtn" class="hero-button btn-rest">
+					<button id="submitBtn" class="hero-button btn-rest" data-service-type="заказать звонок">
 						<div class="hero-btn-icon"></div>
 						<div class="hero-btn-text">ЗАКАЗАТЬ ЗВОНОК</div>
 					</button>

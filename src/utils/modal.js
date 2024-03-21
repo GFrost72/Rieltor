@@ -3,17 +3,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
     var modal = document.getElementById("myModal");
 
     // Получение кнопок, которые открывают модальное окно
-    var btns = document.querySelectorAll(".article-arrow"); // Предполагая, что все ваши кнопки имеют класс 'article-arrow'
+    var btnsArticleArrow = document.querySelectorAll(".article-arrow");
+    var btnsHeroButton = document.querySelectorAll(".hero-button"); 
+
+    // Объединение NodeList'ов в один массив
+    var allBtns = [...btnsArticleArrow, ...btnsHeroButton];
 
     // Получение элемента <span>, который закрывает модальное окно
     var span = document.getElementsByClassName("close")[0];
 
     // Перебор всех кнопок и добавление обработчика клика, который открывает модальное окно и устанавливает тип услуги
-    btns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            var serviceType = this.getAttribute('data-service-type'); // Предполагаем, что добавлен соответствующий атрибут к кнопкам
-            document.getElementById('serviceType').value = serviceType;
-            modal.style.display = "block";
+    allBtns.forEach(btn => {
+		btn.addEventListener('click', function() {
+			var serviceType = this.getAttribute('data-service-type');
+			document.getElementById('serviceType').value = serviceType;
+			modal.style.display = "block";
         });
     });
 
@@ -28,4 +32,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
             modal.style.display = "none";
         }
     }
+
+    // Обработчик нажатия клавиши ESC для закрытия модального окна
+    document.addEventListener('keydown', function(event) {
+        if (event.key === "Escape" ||event.key === "Escape") {
+            modal.style.display = "none";
+        }
+    });
 });

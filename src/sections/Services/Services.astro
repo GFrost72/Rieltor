@@ -1,8 +1,6 @@
 ---
 import "./services.style.scss";
 
-
-
 const serviceListSold = [
 	'Юридическая консультация',
 	'Оценка рыночной стоимости',
@@ -30,9 +28,9 @@ const serviceListNewBuilding = [
 ]
 ---
 
-<script src="./modal.js"></script>
-<script src="./validator.js"></script>
-<script src="./formAJAX.js"></script>
+<script src="@utils/modal.js"></script>
+<script src="@utils/formAJAX.js"></script>
+<script src="@utils/validator.js"></script>
 
 <section class="services">
 	<div class="container">
@@ -54,7 +52,7 @@ const serviceListNewBuilding = [
 					<label class="label-form" for="phone">Телефон</label>
 					<input type="text" id="phone" name="phone" placeholder="Ваш телефон">
 					<div class="error-message" id="phone-error"></div>
-					<input type="hidden" id="serviceType" name="serviceType" value="">
+					<input type="hidden" id="serviceType" name="serviceType">
 					<input type="submit" value="Оставить заявку">
 					<p class="form-text">Оставляя данные формы вы соглашаетесь с <a class="privacy-policy-link"  href="/privacypolicy">политикой конфиденциальности</a></p>
 				</form>
